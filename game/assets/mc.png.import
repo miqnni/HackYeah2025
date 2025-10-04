@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cccqqpbdks114"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://bbtvayiogalet"
+path="res://.godot/imported/mc.png-3490851b9232f72fef4c31a9e54b8a80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/mc.png"
+dest_files=["res://.godot/imported/mc.png-3490851b9232f72fef4c31a9e54b8a80.ctex"]
 
 [params]
 

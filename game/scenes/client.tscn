@@ -1,17 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0abm4ihic0l4"]
+[gd_scene load_steps=11 format=3 uid="uid://d0abm4ihic0l4"]
 
-[ext_resource type="Texture2D" uid="uid://67r5bt47n8d" path="res://assets/IMG_2123.png" id="1_4tr0r"]
+[ext_resource type="Texture2D" uid="uid://b28vcqhpy7g7q" path="res://assets/npc1.png" id="1_da3od"]
 [ext_resource type="Script" uid="uid://chdsnxwjdnnuy" path="res://scripts/client_click_target.gd" id="2_1t5vp"]
 [ext_resource type="Script" uid="uid://cf0cybdu61q1i" path="res://scripts/client.gd" id="2_r26j7"]
 [ext_resource type="PackedScene" uid="uid://bafv7qki3ecdb" path="res://scenes/client_order_pop_up.tscn" id="3_4tr0r"]
-[ext_resource type="Texture2D" uid="uid://ckjjlaqaqjtul" path="res://assets/Ciecz.png" id="5_da3od"]
+[ext_resource type="Texture2D" uid="uid://d10hgj87hvo3j" path="res://assets/Dymek_1.png" id="5_5q6u5"]
+[ext_resource type="Texture2D" uid="uid://dg1hege3ywgvq" path="res://assets/dymek-środek.png" id="6_7rsog"]
 [ext_resource type="Script" uid="uid://ceap6lyflq5t5" path="res://scripts/potka.gd" id="6_dipmf"]
+[ext_resource type="Texture2D" uid="uid://dcgwy0y71h1kq" path="res://assets/Potek 1 płyn .png" id="6_umycy"]
+[ext_resource type="Texture2D" uid="uid://bccsti4g1278s" path="res://assets/Potek 1 .png" id="8_7rsog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t5vp"]
-size = Vector2(220, 489)
+size = Vector2(489, 1607.25)
 
 [node name="Client" type="Sprite2D"]
-texture = ExtResource("1_4tr0r")
+texture = ExtResource("1_da3od")
 script = ExtResource("2_r26j7")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -20,20 +23,29 @@ collision_mask = 2
 script = ExtResource("2_1t5vp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5.000002, 23.500008)
+visible = false
+position = Vector2(-1501.5, 287.625)
 shape = SubResource("RectangleShape2D_1t5vp")
 
 [node name="ClientOrderPopUp" parent="." instance=ExtResource("3_4tr0r")]
 visible = false
 z_index = 2
-position = Vector2(242, -235.99998)
-scale = Vector2(0.83425546, 0.91647685)
+position = Vector2(-807.00006, -647.00006)
+scale = Vector2(4.149835, 4.149835)
+texture = ExtResource("5_5q6u5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ClientOrderPopUp"]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_7rsog")
 
 [node name="Sprite2D" type="Sprite2D" parent="ClientOrderPopUp"]
-position = Vector2(-1.5258789e-05, -14.184784)
-scale = Vector2(0.45328468, 0.45328468)
-texture = ExtResource("5_da3od")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_umycy")
 script = ExtResource("6_dipmf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ClientOrderPopUp"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_7rsog")
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]

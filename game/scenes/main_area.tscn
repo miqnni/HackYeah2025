@@ -1,60 +1,197 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0imawpt80tvo"]
+[gd_scene load_steps=10 format=3 uid="uid://b0imawpt80tvo"]
 
 [ext_resource type="PackedScene" uid="uid://d0abm4ihic0l4" path="res://scenes/client.tscn" id="1_ijlm5"]
 [ext_resource type="Script" uid="uid://dx8gsapaxfulv" path="res://scripts/Mainloop.gd" id="1_k78ul"]
 [ext_resource type="PackedScene" uid="uid://i8pnedvb6ju5" path="res://scenes/mix_table.tscn" id="2_suqx5"]
-[ext_resource type="Texture2D" uid="uid://baxvo05hcdo0l" path="res://assets/IMG_2124.png" id="3_5wheu"]
-[ext_resource type="Texture2D" uid="uid://d1ivr7r2yru1n" path="res://assets/IMG_2127.png" id="4_8pu0s"]
-[ext_resource type="Texture2D" uid="uid://dx5xvpe3yl8qm" path="res://assets/Drzwi_Final.png" id="5_k78ul"]
+[ext_resource type="Texture2D" uid="uid://bf6h2kspnn80p" path="res://assets/Blat_Final_.png" id="3_k78ul"]
+[ext_resource type="PackedScene" path="res://scenes/door_hammer.tscn" id="4_nx8rg"]
+[ext_resource type="Texture2D" uid="uid://bbtvayiogalet" path="res://assets/mc.png" id="5_baxvn"]
+
+[sub_resource type="Animation" id="Animation_k78ul"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Client1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(520, 162), Vector2(520, 750)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Client2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(260, 162), Vector2(520, 162)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Client3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 162), Vector2(260, 162)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Client4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-260, 161.99998), Vector2(0, 162)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Client5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-260, 750), Vector2(-260, 162)]
+}
+
+[sub_resource type="Animation" id="Animation_nx8rg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Client1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 162)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Client2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(260, 162)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Client3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 162)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Client4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-260, 161.99998)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Client5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-260, 750)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_baxvn"]
+_data = {
+&"RESET": SubResource("Animation_nx8rg"),
+&"new_animation": SubResource("Animation_k78ul")
+}
 
 [node name="MainArea" type="Node2D"]
-scale = Vector2(1.7254056, 1.7254056)
 script = ExtResource("1_k78ul")
 
 [node name="Mix_table" parent="." instance=ExtResource("2_suqx5")]
-position = Vector2(408.00003, 152)
-scale = Vector2(0.55671614, 0.55671614)
+position = Vector2(663.6121, 224.87466)
 
 [node name="Table" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(-151, 214)
-scale = Vector2(0.6025004, 0.6025004)
-texture = ExtResource("3_5wheu")
+position = Vector2(-249.21678, 330.9367)
+texture = ExtResource("3_k78ul")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.58, 0.58)
+zoom = Vector2(0.6, 0.6)
+
+[node name="Node2D" parent="." instance=ExtResource("4_nx8rg")]
+position = Vector2(-1023, -267)
 
 [node name="Gracz" type="Sprite2D" parent="."]
-position = Vector2(118.18752, 52.253067)
-scale = Vector2(0.5843023, 0.58718234)
-texture = ExtResource("4_8pu0s")
-
-[node name="Drzwi-pc" type="Sprite2D" parent="."]
-position = Vector2(-320.99997, 10.000004)
-scale = Vector2(0.5270535, 0.5270535)
-texture = ExtResource("5_k78ul")
+position = Vector2(205.16916, 71.86716)
+scale = Vector2(1, 1.005)
+texture = ExtResource("5_baxvn")
 
 [node name="Client1" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(30, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
+position = Vector2(520, 162)
+scale = Vector2(0.35, 0.35)
 
 [node name="Client2" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(-140, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
+position = Vector2(260, 162)
+scale = Vector2(0.35, 0.35)
 
 [node name="Client3" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(-310, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
+position = Vector2(0, 162)
+scale = Vector2(0.35, 0.35)
 
 [node name="Client4" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(-480, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
+position = Vector2(-260, 161.99998)
+scale = Vector2(0.35, 0.35)
+
+[node name="Client5" parent="." instance=ExtResource("1_ijlm5")]
+z_index = 2
+position = Vector2(-260, 750)
+scale = Vector2(0.35, 0.35)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_baxvn")
+}
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

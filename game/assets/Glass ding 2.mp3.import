@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boopnquerb1dx"
+path="res://.godot/imported/Glass ding 2.mp3-6a21167bfcc24c0080fe4815bfbb4af8.mp3str"
+
+[deps]
+
+source_file="res://assets/Glass ding 2.mp3"
+dest_files=["res://.godot/imported/Glass ding 2.mp3-6a21167bfcc24c0080fe4815bfbb4af8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

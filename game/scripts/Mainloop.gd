@@ -40,6 +40,7 @@ func score(order) -> float:
 	return A*(((255-abs(mix_table.Red-order[0]))/255.0+(255-abs(mix_table.Green-order[1]))/255.0+(255-abs(mix_table.Blue-order[2]))/255.0)/3.0-(A-1)/A)
 
 func free_client(nr):
+	$AnimationPlayer.play("new_animation")
 	for i in range(nr,3):
 		clients_table[i].order=clients_table[i+1].order
 	clients-=1

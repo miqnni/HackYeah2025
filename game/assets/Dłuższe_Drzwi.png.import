@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cccqqpbdks114"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://nrnai5kxsxjs"
+path="res://.godot/imported/Dłuższe_Drzwi.png-957bab899d9746a0af164b5307024a3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/Dłuższe_Drzwi.png"
+dest_files=["res://.godot/imported/Dłuższe_Drzwi.png-957bab899d9746a0af164b5307024a3d.ctex"]
 
 [params]
 
