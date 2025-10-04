@@ -11,17 +11,26 @@ script = ExtResource("1_hu2p6")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_hu2p6")
+
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(0, -8)
 texture = ExtResource("1_gsnt5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("CircleShape2D_hu2p6")
+[node name="TextureButton" type="TextureButton" parent="RigidBody2D"]
+offset_left = -78.0
+offset_top = -85.0
+offset_right = 78.0
+offset_bottom = 69.0
+texture_normal = ExtResource("1_gsnt5")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = -11.0
 offset_top = -11.0
 offset_right = 11.0
 offset_bottom = 11.0
 
+[connection signal="button_down" from="RigidBody2D/TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
