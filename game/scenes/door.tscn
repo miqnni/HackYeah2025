@@ -6,7 +6,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q5w8r"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="door" type="Sprite2D" parent="."]
 texture = ExtResource("1_la1wf")

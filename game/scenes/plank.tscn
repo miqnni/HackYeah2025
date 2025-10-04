@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://n2cg7xbuu6hj" path="res://assets/DESKA_FINALLL.png" id="1_7tt5t"]
 [ext_resource type="PackedScene" uid="uid://b8gev2slkuuod" path="res://scenes/bolt.tscn" id="2_jmhrc"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 

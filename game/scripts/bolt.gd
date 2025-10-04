@@ -8,11 +8,8 @@ func _ready() :
 	rigid_body_2d.freeze = true
 
 func release_bolt() :
-	
 	rigid_body_2d.freeze = false
 	rigid_body_2d.visible = false
-
-
 
 func _on_button_button_down() -> void:
 	release_bolt()
