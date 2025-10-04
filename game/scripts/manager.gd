@@ -1,8 +1,8 @@
 extends Node
 
-var Red = 0
-var Green = 0
-var Blue = 0
+var Red = 255
+var Green = 255
+var Blue = 255
 
 var h_red=false
 var h_green=false
@@ -10,20 +10,29 @@ var h_blue=false
 var h_del=false
 
 func _process(delta: float) -> void:
-	if h_red and Red<256:
-		Red+=1
-	if h_green and Green<256:
-		Green+=1
-	if h_blue and Blue<256:
-		Blue+=1
-	if h_del:
-		if Blue>0:
-			Blue-=1
+	if h_red:
 		if Green>0:
 			Green-=1
+		if Blue>0:
+			Blue-=1
+	if h_green:
 		if Red>0:
 			Red-=1
-	print("Red: ",Red," Green: ",Green," Blue: ",Blue)
+		if Blue>0:
+			Blue-=1
+	if h_blue:
+		if Red>0:
+			Red-=1
+		if Green>0:
+			Green-=1
+	if h_del:
+		if Blue<255:
+			Blue+=1
+		if Green<255:
+			Green+=1
+		if Red<255:
+			Red+=1
+	#print("Red: ",Red," Green: ",Green," Blue: ",Blue)
 
 func _on_button_button_down() -> void:
 	h_red=true
