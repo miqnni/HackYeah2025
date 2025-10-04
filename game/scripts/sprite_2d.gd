@@ -5,4 +5,5 @@ func _ready():
 	pass
 
 func _process(delta):
-	position.x += 200 * delta;
+	position.x += 200 * delta
+	position.y += 100 * delta
