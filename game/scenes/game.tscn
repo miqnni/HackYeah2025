@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=6 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://d0x5svp26o6o6" path="res://scripts/manager.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cmsunywnrf3cr" path="res://icon.svg" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://crrn5o8njs6qt" path="res://scripts/sprite_2d.gd" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bb3pdqhw050qm" path="res://scenes/door.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://d2oyrird4hagl" path="res://scenes/hammer.tscn" id="5_iywne"]
 
 [node name="Game" type="Node2D"]
 
@@ -42,8 +43,11 @@ offset_right = 444.0
 offset_bottom = 248.0
 icon = ExtResource("1_yqjtg")
 
-[node name="Node2D" parent="." instance=ExtResource("4_lbhrr")]
+[node name="Door" parent="." instance=ExtResource("4_lbhrr")]
 position = Vector2(717, 295)
+
+[node name="Node2D2" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(759, 65)
 
 [connection signal="button_down" from="Button" to="Manager" method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="Manager" method="_on_button_button_up"]
