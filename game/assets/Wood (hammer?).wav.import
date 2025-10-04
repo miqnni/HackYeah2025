@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bm57yu3baifee"
+path="res://.godot/imported/Wood (hammer?).wav-47eee93b06df5e606a94e79d352bf43f.sample"
+
+[deps]
+
+source_file="res://assets/Wood (hammer?).wav"
+dest_files=["res://.godot/imported/Wood (hammer?).wav-47eee93b06df5e606a94e79d352bf43f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
