@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb3pdqhw050qm"]
+
+[ext_resource type="Texture2D" uid="uid://crohv2uohfoab" path="res://assets/Deska_1.png" id="1_hpvv5"]
+[ext_resource type="Texture2D" uid="uid://cngn1g4kibs1x" path="res://assets/IMG_2140.png" id="2_uvdjg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+disable_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(0, 3.8146973e-06)
+scale = Vector2(0.25075188, 0.25075185)
+texture = ExtResource("1_hpvv5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-60, 40, -60, 78, -50, 53, -53, 48, -47, 45, -45, 50, -50, 53, -60, 78, 74, -39, 72, -76)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(23, 130)
+scale = Vector2(0.359375, 0.359375)
+texture = ExtResource("2_uvdjg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-48, 50, -48, 49, -49, 49, -49, 50)
