@@ -46,10 +46,6 @@ offset_bottom = -166.0
 position = Vector2(-28, -212)
 texture = ExtResource("4_mie0y")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(17, -137)
-zoom = Vector2(0.5, 0.5)
-
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
