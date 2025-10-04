@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphvjodqxe6pp"]
+
+[ext_resource type="Texture2D" uid="uid://n2cg7xbuu6hj" path="res://assets/DESKA_FINALLL.png" id="1_7tt5t"]
+[ext_resource type="PackedScene" uid="uid://b8gev2slkuuod" path="res://scenes/bolt.tscn" id="2_jmhrc"]
+
+[node name="Node2D2" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_7tt5t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+visible = false
+polygon = PackedVector2Array(-212, -311, -294, -230, -238, -238, -238, -242, -234, -249, -231, -253, -227, -255, -220, -255, -215, -252, -211, -246, -209, -239, -210, -235, -215, -229, -221, -226, -229, -229, -236, -234, -238, -238, -294, -230, 232, 303, 319, 219, 263, 227, 263, 232, 260, 239, 256, 242, 251, 245, 245, 246, 238, 242, 235, 238, 235, 229, 237, 220, 244, 217, 251, 216, 258, 217, 261, 220, 262, 224, 263, 227, 319, 219)
+
+[node name="Bolt" parent="." instance=ExtResource("2_jmhrc")]
+position = Vector2(-223, -241)
+
+[node name="Bolt2" parent="." instance=ExtResource("2_jmhrc")]
+position = Vector2(249, 229)
