@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2oyrird4hagl"]
+[gd_scene load_steps=4 format=3 uid="uid://d2oyrird4hagl"]
 
 [ext_resource type="Script" uid="uid://c0203njs1s7a4" path="res://scripts/hammer.gd" id="1_7cboi"]
 [ext_resource type="Texture2D" uid="uid://bn7y0nt284g2c" path="res://assets/Młotek_Z_Obwódką_.png" id="2_01xny"]
 [ext_resource type="Texture2D" uid="uid://dg2bhoc2vvoqg" path="res://assets/Młotek__BEz_Obwódki_.png" id="2_7cboi"]
-[ext_resource type="Texture2D" uid="uid://dqi70nf5vk0vs" path="res://assets/Pasek_Finalll.png" id="3_7cboi"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_7cboi")
@@ -13,6 +12,5 @@ offset_right = 144.0
 offset_bottom = 213.0
 texture_normal = ExtResource("2_7cboi")
 texture_hover = ExtResource("2_01xny")
-texture_disabled = ExtResource("3_7cboi")
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]

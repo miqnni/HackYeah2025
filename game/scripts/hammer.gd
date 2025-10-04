@@ -6,9 +6,9 @@ extends Node2D
 var hammer_picked = false
 
 var hammer_val = 0
-var hammer_threshold = 145
+var hammer_threshold = 290
 var hammer_jump = 2
-var hammer_good_threshold = 30
+var hammer_good_threshold = 60
 
 @onready var dot_x_center = bar_dot.position.x
 
@@ -19,7 +19,8 @@ var hammer_good_threshold = 30
 
 func _process(delta: float) :
 	if hammer_picked :
-		texture_button.disabled = true
+		#texture_button.disabled = true
+		texture_button.texture_normal = "res://assets/Paseczek_Hover.png"
 		if (hammer_val <= -hammer_threshold and hammer_jump < 0) or (hammer_val >= hammer_threshold and hammer_jump > 0) :
 			hammer_jump *= -1.01
 		hammer_val += hammer_jump
