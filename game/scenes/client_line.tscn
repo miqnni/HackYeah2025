@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://57s30i86w1my"]
+[gd_scene load_steps=2 format=3 uid="uid://57s30i86w1my"]
+
+[ext_resource type="Script" uid="uid://ba174r4j03vjo" path="res://scripts/client_line.gd" id="1_8a24g"]
 
 [node name="ClientLine" type="Node2D"]
+script = ExtResource("1_8a24g")
+
+[node name="SpawnClientTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="SpawnClientTimer" to="." method="_on_spawn_client_timer_timeout"]

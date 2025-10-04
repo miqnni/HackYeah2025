@@ -1,13 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0imawpt80tvo"]
+[gd_scene load_steps=7 format=3 uid="uid://b0imawpt80tvo"]
 
-[ext_resource type="PackedScene" uid="uid://d0abm4ihic0l4" path="res://scenes/client.tscn" id="1_ijlm5"]
 [ext_resource type="Script" uid="uid://dx8gsapaxfulv" path="res://scripts/Mainloop.gd" id="1_k78ul"]
 [ext_resource type="PackedScene" uid="uid://i8pnedvb6ju5" path="res://scenes/mix_table.tscn" id="2_suqx5"]
 [ext_resource type="Texture2D" uid="uid://baxvo05hcdo0l" path="res://assets/IMG_2124.png" id="3_5wheu"]
 [ext_resource type="Texture2D" uid="uid://d1ivr7r2yru1n" path="res://assets/IMG_2127.png" id="4_8pu0s"]
 [ext_resource type="Texture2D" uid="uid://dx5xvpe3yl8qm" path="res://assets/Drzwi_Final.png" id="5_k78ul"]
 [ext_resource type="PackedScene" uid="uid://57s30i86w1my" path="res://scenes/client_line.tscn" id="7_baxvn"]
-[ext_resource type="Script" uid="uid://ba174r4j03vjo" path="res://scenes/client_line.gd" id="8_u8dlq"]
 
 [node name="MainArea" type="Node2D"]
 scale = Vector2(1.7254056, 1.7254056)
@@ -36,30 +34,5 @@ position = Vector2(-320.99997, 10.000004)
 scale = Vector2(0.5270535, 0.5270535)
 texture = ExtResource("5_k78ul")
 
-[node name="Client1" parent="." instance=ExtResource("1_ijlm5")]
-z_index = 2
-position = Vector2(30, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
-
-[node name="Client2" parent="." instance=ExtResource("1_ijlm5")]
-z_index = 2
-position = Vector2(-140, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
-
-[node name="Client3" parent="." instance=ExtResource("1_ijlm5")]
-z_index = 2
-position = Vector2(-310, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
-
-[node name="Client4" parent="." instance=ExtResource("1_ijlm5")]
-z_index = 2
-position = Vector2(-480, 189.562)
-scale = Vector2(0.60369325, 0.56496245)
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-
 [node name="ClientLine" parent="." instance=ExtResource("7_baxvn")]
-script = ExtResource("8_u8dlq")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+z_index = 2
