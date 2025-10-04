@@ -12,9 +12,9 @@ var hammer_good_threshold = 30
 
 @onready var dot_x_center = bar_dot.position.x
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Wow, a left mouse click")
+#func _input(event: InputEvent) -> void:
+	#if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		#print("Wow, a left mouse click")
 	
 
 func _process(delta: float) :

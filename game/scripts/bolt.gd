@@ -37,7 +37,7 @@ func release_bolt() :
 
 func _on_texture_button_button_down() -> void:
 	if hammer.hammer_picked :
-		print(hammer.hammer_val)
+		#print(hammer.hammer_val)
 		if abs(hammer.hammer_val) < hammer.hammer_good_threshold :
 			bolt_out = 0
 		else :
