@@ -5,12 +5,14 @@ extends Node2D
 @onready var collision_shape_2d: CollisionShape2D = $RigidBody2D/CollisionShape2D
 @onready var hammer: Node2D = $"../../../Hammer"
 @onready var button: TextureButton =  $RigidBody2D/TextureButton
+@onready var sprite_2d: Sprite2D = $RigidBody2D/Sprite2D
 
 var bolt_out = 0
 var bolt_threshold = 0.5
 var bolt_released = false
 
 var bolt_prob = 0.01
+var bolt_jump = 0.01
 var rng = RandomNumberGenerator.new()
 
 func _process(delta: float) :
@@ -18,9 +20,9 @@ func _process(delta: float) :
 		return
 	var rand = rng.randf_range(0, 1)
 	if rand < bolt_prob :
-		bolt_out += 0.01
+		bolt_out += bolt_jump
 	
-	button.modulate = Color(1, 0, 0, bolt_out)
+	sprite_2d.modulate = Color(1, 0, 0, bolt_out)
 	
 	if bolt_out >= 1 :
 		release_bolt()

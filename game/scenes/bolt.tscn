@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8gev2slkuuod"]
+[gd_scene load_steps=5 format=3 uid="uid://b8gev2slkuuod"]
 
 [ext_resource type="Texture2D" uid="uid://b1uyehwrkwup5" path="res://assets/GWÓŹDŹ_W_DESCE_FINAAAL.png" id="1_gsnt5"]
 [ext_resource type="Script" uid="uid://cvubvpbauc8yx" path="res://scripts/bolt.gd" id="1_hu2p6"]
+[ext_resource type="Texture2D" uid="uid://c13rlb2csd5o7" path="res://assets/Gwóźdź_Hover.png" id="3_s0h4p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hu2p6"]
 radius = 12.0
@@ -14,16 +15,17 @@ script = ExtResource("1_hu2p6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CircleShape2D_hu2p6")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(0, -8)
-texture = ExtResource("1_gsnt5")
-
 [node name="TextureButton" type="TextureButton" parent="RigidBody2D"]
 offset_left = -78.0
 offset_top = -85.0
 offset_right = 78.0
 offset_bottom = 69.0
 texture_normal = ExtResource("1_gsnt5")
+texture_hover = ExtResource("3_s0h4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_gsnt5")
 
 [node name="Button" type="Button" parent="."]
 visible = false
