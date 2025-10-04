@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0x5svp26o6o6" path="res://scripts/manager.gd" id="1_3vvyu"]
 [ext_resource type="Texture2D" uid="uid://umkmlg63oa0w" path="res://assets/IMG_2126.png" id="2_fc4cn"]
 [ext_resource type="Texture2D" uid="uid://ckjjlaqaqjtul" path="res://assets/Ciecz.png" id="3_cmilg"]
-[ext_resource type="Script" uid="uid://7klkrhhbxe7o" path="res://scenes/mix_color.gd" id="4_fc4cn"]
+[ext_resource type="Script" uid="uid://7klkrhhbxe7o" path="res://scripts/mix_color.gd" id="4_fc4cn"]
 [ext_resource type="Texture2D" uid="uid://c26aq3edislai" path="res://assets/IMG_2125.png" id="4_mie0y"]
 
 [node name="Mix_table" type="Node2D"]
@@ -23,24 +23,28 @@ offset_left = -222.0
 offset_top = -703.0
 offset_right = -65.0
 offset_bottom = -452.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 9.0
 offset_top = -684.0
 offset_right = 168.0
 offset_bottom = -452.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="."]
 offset_left = -181.0
 offset_top = -410.0
 offset_right = -17.0
 offset_bottom = -169.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="."]
 offset_left = 35.0
 offset_top = -403.0
 offset_right = 191.0
 offset_bottom = -166.0
+metadata/_edit_use_anchors_ = true
 
 [node name="mixtures" type="Sprite2D" parent="."]
 position = Vector2(-28, -212)
