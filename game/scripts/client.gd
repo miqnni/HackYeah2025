@@ -8,10 +8,21 @@ func new_order():
 	order = [randi_range(0, 255),randi_range(0, 255),randi_range(0, 255)]
 
 func submit():
-	if name=="Client1":
-		score = main_area.score(order)
-		print(score)
+	#if name=="Client1":
+		#score = main_area.score(order)
+		#print(score)
 		#SCORE ANIMATION
 		#var nr = int(str(name)[6])
 		#print(nr)
-		main_area.free_client(0)
+		#main_area.free_client(0)
+	
+	# Get client's scores
+	score = main_area.score(order)
+	print(score)
+	pass
+
+# TODO: Rage Meter
+# - A timer should be used
+# - On timeout: Game Over (Clients Version)
+# - If the order is successfully submitted: stop timer, remove the instance
+#   - MAYBE: get_owner().queue_free()

@@ -1,3 +1,6 @@
+# mix_color.gd to tak naprawde skrypt do koloru
+# w KOTLE (CAULDRON)
+
 extends Sprite2D
 @onready var mix_table: Node2D = $"../.."
 
