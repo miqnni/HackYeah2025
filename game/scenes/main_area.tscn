@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b0imawpt80tvo"]
+
+[node name="MainArea" type="Node2D"]
+
+[node name="Client1" type="Sprite2D" parent="."]

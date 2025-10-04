@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjypbt24rwse1"]
+
+[ext_resource type="Texture2D" uid="uid://cmsunywnrf3cr" path="res://icon.svg" id="1_2fqmc"]
+[ext_resource type="Script" uid="uid://chnkow8otfmhq" path="res://scenes/client_order_pop_up.gd" id="2_mw3a6"]
+
+[node name="ClientOrderPopUp" type="Sprite2D"]
+scale = Vector2(3.1328125, 1.1640625)
+texture = ExtResource("1_2fqmc")
+script = ExtResource("2_mw3a6")
+
+[node name="CloseButton" type="Sprite2D" parent="."]
+
+[node name="OrderTextTODO" type="Node2D" parent="."]
+
+[node name="ExpectedColor" type="Sprite2D" parent="."]
+
+[node name="ColorSliders" type="Node2D" parent="."]
+
+[node name="ColorSliderR" type="Sprite2D" parent="ColorSliders"]
+
+[node name="ColorSliderG" type="Sprite2D" parent="ColorSliders"]
+
+[node name="ColorSliderB" type="Sprite2D" parent="ColorSliders"]
