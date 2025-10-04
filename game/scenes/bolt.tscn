@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8gev2slkuuod"]
+
+[ext_resource type="Texture2D" uid="uid://b1uyehwrkwup5" path="res://assets/GWÓŹDŹ_W_DESCE_FINAAAL.png" id="1_gsnt5"]
+[ext_resource type="Script" uid="uid://cvubvpbauc8yx" path="res://scripts/bolt.gd" id="1_hu2p6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hu2p6"]
+radius = 12.0
+
+[node name="Bolt" type="Node2D"]
+script = ExtResource("1_hu2p6")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_gsnt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_hu2p6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 11.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
