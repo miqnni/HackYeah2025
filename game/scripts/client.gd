@@ -1,0 +1,17 @@
+extends Sprite2D
+@onready var main_area: Node2D = $".."
+
+var order = [0,0,0]
+var score = 0
+
+func new_order():
+	order = [randi_range(0, 255),randi_range(0, 255),randi_range(0, 255)]
+
+func submit():
+	if name=="Client1":
+		score = main_area.score(order)
+		print(score)
+		#SCORE ANIMATION
+		#var nr = int(str(name)[6])
+		#print(nr)
+		main_area.free_client(0)

@@ -1,16 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvrnhxiq0mjgx"]
+[gd_scene load_steps=8 format=3 uid="uid://d0abm4ihic0l4"]
 
 [ext_resource type="Texture2D" uid="uid://67r5bt47n8d" path="res://assets/IMG_2123.png" id="1_4tr0r"]
 [ext_resource type="Script" uid="uid://chdsnxwjdnnuy" path="res://scripts/client_click_target.gd" id="2_1t5vp"]
-[ext_resource type="PackedScene" uid="uid://bjypbt24rwse1" path="res://scenes/client_order_pop_up.tscn" id="3_4tr0r"]
+[ext_resource type="Script" uid="uid://cf0cybdu61q1i" path="res://scripts/client.gd" id="2_r26j7"]
+[ext_resource type="PackedScene" uid="uid://bafv7qki3ecdb" path="res://scenes/client_order_pop_up.tscn" id="3_4tr0r"]
+[ext_resource type="Texture2D" uid="uid://ckjjlaqaqjtul" path="res://assets/Ciecz.png" id="5_da3od"]
+[ext_resource type="Script" uid="uid://ceap6lyflq5t5" path="res://scripts/potka.gd" id="6_dipmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t5vp"]
 size = Vector2(220, 489)
 
 [node name="Client" type="Sprite2D"]
 texture = ExtResource("1_4tr0r")
+script = ExtResource("2_r26j7")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("2_1t5vp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -18,5 +24,16 @@ position = Vector2(-5.000002, 23.500008)
 shape = SubResource("RectangleShape2D_1t5vp")
 
 [node name="ClientOrderPopUp" parent="." instance=ExtResource("3_4tr0r")]
+visible = false
+z_index = 2
 position = Vector2(242, -235.99998)
 scale = Vector2(0.83425546, 0.91647685)
+
+[node name="Sprite2D" type="Sprite2D" parent="ClientOrderPopUp"]
+position = Vector2(-1.5258789e-05, -14.184784)
+scale = Vector2(0.45328468, 0.45328468)
+texture = ExtResource("5_da3od")
+script = ExtResource("6_dipmf")
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
