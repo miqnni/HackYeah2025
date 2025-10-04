@@ -6,9 +6,9 @@ extends Node2D
 var hammer_picked = false
 
 var hammer_val = 0
-var hammer_threshold = 145
+var hammer_threshold = 290
 var hammer_jump = 2
-var hammer_good_threshold = 30
+var hammer_good_threshold = 60
 
 @onready var dot_x_center = bar_dot.position.x
 
