@@ -55,22 +55,31 @@ func play_sound(audioplay, volume) :
 	audioplay.play()
 
 func game_over(type = 0) :
+	cursor_sprite.texture = arrow
+	hammer_object.hammer_picked = false
 	RUNNING = false
 	print("Game over")
+	if type == 0:
+		$GameOver.witch_ending()
+	else:
+		$GameOver.clients_ending()
+
 
 var mouse_offset_x = 65
 var mouse_offset_y = 30
 
 func _process(delta: float) -> void:
+  var mouse_pos = get_global_mouse_position()
+	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
+	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
 	if not $Background_Music.playing :
 		play_sound($Background_Music, music)
 	if not RUNNING :
 		return
 	hammer_state = hammer_object.hammer_picked
-	var mouse_pos = get_global_mouse_position()
-	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
-	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
+
 	
+	hammer_state = hammer_object.hammer_picked
 	if hammer_state and click_pressed :
 		cursor_sprite.rotation += rotation_speed
 		cursor_sprite.rotation = min(cursor_sprite.rotation, max_angle)

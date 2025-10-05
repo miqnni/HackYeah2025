@@ -9,6 +9,9 @@ var pot_fill_table=[]
 var order = [0,0,0]
 var score = 0
 
+# The score needed for the client to accept a drink
+const serving_pass_threshold = 0.80
+
 func _ready() -> void:
 	var tex1 = load("res://assets/npc1.png")
 	var tex2 = load("res://assets/npc2.png")
@@ -16,7 +19,9 @@ func _ready() -> void:
 	var tex4 = load("res://assets/npc4.png")
 	var tex5 = load("res://assets/npc5.png")
 	var tex6 = load("res://assets/npc6.png")
+	
 	tex_table=[tex1,tex2,tex3,tex4,tex5,tex6]
+	
 	var pot1 = load("res://assets/Potek 1 .png")
 	var pot1_f = load("res://assets/Potek 1 płyn .png")
 	var pot2 = load("res://assets/Potek 2.png")
@@ -27,7 +32,9 @@ func _ready() -> void:
 	var pot4_f = load("res://assets/Potek 4 płyn .png")
 	var pot5 = load("res://assets/Potek 5.png")
 	var pot5_f = load("res://assets/Potek 5 płyn .png")
+	
 	pot_table=[pot1,pot2,pot3,pot4,pot5]
+	
 	pot_fill_table=[pot1_f,pot2_f,pot3_f,pot4_f,pot5_f]
 
 func new_order():
@@ -42,11 +49,10 @@ func submit():
 		return
 	if name=="Client1":
 		score = main_area.score(order)
-		print(score)
-		#SCORE ANIMATION
-		#var nr = int(str(name)[6])
-		#print(nr)
-		main_area.free_client(0)
+		if score >= serving_pass_threshold:
+			main_area.free_client(0)
+		else:
+			$AnimationPlayer.play("reject_drink")
 
 func roll_pot_texture():
 	var tex = randi_range(0,4)

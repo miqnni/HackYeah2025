@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ht0h6oi3ybx"]
+
+[ext_resource type="Texture2D" uid="uid://bl5n1kew0fr8x" path="res://Wiedźma end/Endwiedzma1.png" id="1_wqhvx"]
+[ext_resource type="Script" uid="uid://bifaa0ncig661" path="res://scenes/game_over.gd" id="2_racf3"]
+[ext_resource type="Script" uid="uid://bbkrsc7kia7hv" path="res://scripts/game_over_click_target.gd" id="2_tbwuq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0rhi"]
+size = Vector2(3822.5, 2136)
+
+[node name="GameOver" type="Sprite2D"]
+scale = Vector2(0.30078125, 0.30462962)
+texture = ExtResource("1_wqhvx")
+script = ExtResource("2_racf3")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_tbwuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_o0rhi")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="ChangeSlideTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="ChangeSlideTimer" to="." method="_on_change_slide_timer_timeout"]

@@ -1,7 +1,7 @@
 extends Area2D
 @onready var client: Sprite2D = $".."
 
-func _input_event(viewport, event, shape_idx):
+func _input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("left_click"):
 		client.submit()
 		
