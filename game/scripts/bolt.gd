@@ -6,6 +6,8 @@ extends Node2D
 @onready var button: TextureButton =  $RigidBody2D/TextureButton
 @onready var sprite_2d: Sprite2D = $RigidBody2D/Sprite2D
 @onready var bolt_loose: RigidBody2D = $RigidBody2D2
+@onready var GAME: Node2D = $"../../../.."
+
 
 var bolt_out = 0
 var bolt_threshold = 0.5
@@ -35,6 +37,7 @@ func _process(delta: float) :
 		release_bolt()
 	
 func _ready() :
+	GAME.bolts_left += 1
 	rigid_body_2d.freeze = true
 	bolt_loose_base = bolt_loose.position
 	bolt_loose.freeze = true
@@ -48,6 +51,7 @@ func release_bolt() :
 	bolt_loose.angular_velocity = rng.randf_range(-ang_max, ang_max)
 	bolt_loose.linear_velocity.x = rng.randf_range(-vel_max, vel_max)
 	bolt_loose.linear_velocity.y = rng.randf_range(-2*vel_max, 0)
+	GAME.bolts_left -= 1
 	
 
 func _on_texture_button_button_down() -> void:
@@ -59,7 +63,7 @@ func _on_texture_button_button_down() -> void:
 				bolt_out = 1
 			else :
 				bolt_out = 0
-		$Wood_Bonk.play()
+		GAME.play_sound($Wood_Bonk, 1.25 * GAME.sfx)
 		return
 	
 	bolt_out = 1

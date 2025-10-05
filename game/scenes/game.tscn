@@ -28,3 +28,4 @@ texture = ExtResource("4_iywne")
 
 [node name="Bonk" type="AudioStreamPlayer2D" parent="CursorSprite"]
 stream = ExtResource("5_iywne")
+volume_db = -19.468
