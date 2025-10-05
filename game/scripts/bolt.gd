@@ -28,8 +28,8 @@ func _process(delta: float) :
 	var rand = rng.randf_range(0, 1)
 	if rand < bolt_prob :
 		bolt_out += bolt_jump
-		if bolt_jump <= 0.2 :
-			bolt_jump += 0.001
+		#if bolt_jump <= 0.2 :
+			#bolt_jump += 0.001
 	
 	sprite_2d.modulate = Color(1, 0, 0, bolt_out)
 	

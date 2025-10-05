@@ -47,10 +47,11 @@ func free_client(nr):
 func _on_timer_2_timeout() -> void:
 	timer_2.stop()
 	client_1.roll_pot_texture()
-	$AnimationPlayer.play("RESET")
 	for i in range(2):
 		clients_table[i].order=clients_table[i+1].order
 		clients_table[i].texture=clients_table[i+1].texture
+	$AnimationPlayer.play("RESET")
 	clients-=1
+	
 	
 	

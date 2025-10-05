@@ -19,7 +19,7 @@ var num_of_bonks = 0
 var vol_min = -50
 var vol_max = 24
 
-var music = 50
+var music = 30
 
 var sfx = 50
 
@@ -48,6 +48,7 @@ func _input(event) :
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	play_sound($Background_Music, music)
 
 func play_sound(audioplay, volume) :
 	audioplay.volume_db = vol_min + (volume * abs(vol_min - vol_max)) / 100
@@ -63,10 +64,20 @@ func game_over(type = 0) :
 	else:
 		$GameOver.clients_ending()
 
-func _process(_delta: float) -> void:
-	cursor_sprite.position = get_global_mouse_position()
+
+var mouse_offset_x = 65
+var mouse_offset_y = 30
+
+func _process(delta: float) -> void:
+  var mouse_pos = get_global_mouse_position()
+	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
+	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
+	if not $Background_Music.playing :
+		play_sound($Background_Music, music)
 	if not RUNNING :
 		return
+	hammer_state = hammer_object.hammer_picked
+
 	
 	hammer_state = hammer_object.hammer_picked
 	if hammer_state and click_pressed :
