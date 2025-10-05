@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"
+uid="uid://dkvqpu5spmm0c"
+path="res://.godot/imported/Kursor.png-8b98a272ad9e78569aede23a7fa88533.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_Final.png"
-dest_files=["res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"]
+source_file="res://assets/Kursor.png"
+dest_files=["res://.godot/imported/Kursor.png-8b98a272ad9e78569aede23a7fa88533.ctex"]
 
 [params]
 
