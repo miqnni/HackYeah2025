@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://c8tgtt7xpecuc"]
 
-[ext_resource type="Script" uid="uid://cqkqgngutxm2e" path="res://scripts/menu.gd" id="1_3dmrc"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_3dmrc"]
 [ext_resource type="Texture2D" uid="uid://byhiv8brw77m4" path="res://assets/Menu/Tło menu .png" id="1_g6gyw"]
 [ext_resource type="Texture2D" uid="uid://b80g1g1dcuyo7" path="res://assets/Menu/pajeczyna_zwoj.png" id="2_3dmrc"]
 [ext_resource type="Texture2D" uid="uid://cc6otnnuepua1" path="res://assets/Menu/Title .png" id="3_81l6r"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b05timb8v1lrc" path="res://assets/Menu/Pasek .png" id="19_81l6r"]
 
 [node name="MENU" type="Node2D"]
+visible = false
 script = ExtResource("1_3dmrc")
 
 [node name="tło" type="Sprite2D" parent="."]
@@ -33,6 +34,7 @@ texture = ExtResource("2_3dmrc")
 texture = ExtResource("3_81l6r")
 
 [node name="3places" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("4_rsfmq")
 
 [node name="start" type="TextureButton" parent="3places"]
@@ -65,7 +67,6 @@ texture_normal = ExtResource("10_6wigr")
 texture_hover = ExtResource("11_lnf0i")
 
 [node name="2places" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("11_g54pe")
 
 [node name="music" type="TextureButton" parent="2places"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0abm4ihic0l4"]
+[gd_scene load_steps=17 format=3 uid="uid://d0abm4ihic0l4"]
 
 [ext_resource type="Texture2D" uid="uid://b28vcqhpy7g7q" path="res://assets/npc1.png" id="1_da3od"]
 [ext_resource type="Script" uid="uid://chdsnxwjdnnuy" path="res://scripts/client_click_target.gd" id="2_1t5vp"]
@@ -77,6 +77,34 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dueaf"]
+resource_name = "bonked"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 200), Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_umycy"]
 resource_name = "new_animation"
@@ -106,9 +134,8 @@ tracks/1/keys = {
 "values": [0.0, 0.2617993877991494, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_dueaf"]
-resource_name = "bonked"
-length = 0.2
+[sub_resource type="Animation" id="Animation_ik056"]
+resource_name = "reject_drink"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -116,17 +143,18 @@ tracks/0/path = NodePath(".:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.125, 0.375, 0.5, 0.625, 0.875, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 200), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(-30, 0), Vector2(30, 0), Vector2(0, 0), Vector2(-30, 0), Vector2(30, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7rsog"]
 _data = {
 &"RESET": SubResource("Animation_7rsog"),
 &"bonked": SubResource("Animation_dueaf"),
-&"new_animation": SubResource("Animation_umycy")
+&"new_animation": SubResource("Animation_umycy"),
+&"reject_drink": SubResource("Animation_ik056")
 }
 
 [node name="Client" type="Sprite2D"]
