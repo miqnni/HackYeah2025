@@ -9,7 +9,7 @@ extends Node2D
 
 var page=1
 
-func start():
+func start_com():
 	$AnimationPlayer.play("comic1")
 	timer.start(7)
 
@@ -36,6 +36,7 @@ func _on_button_button_down() -> void:
 		timer.start(9)
 	if page==4:
 		hide()
+		$"..".RUNNING=true
 	page+=1
 
 	

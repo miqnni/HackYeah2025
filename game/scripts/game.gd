@@ -29,7 +29,7 @@ var max_angle = PI/4
 var final_counter = 0
 var final_counter_max = 200
 
-var RUNNING = true
+var RUNNING = false
 
 func _input(event) :
 	if event is InputEventMouseButton :

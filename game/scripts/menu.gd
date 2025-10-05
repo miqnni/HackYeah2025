@@ -1,8 +1,9 @@
 extends Node2D
+@onready var comic: Node2D = $"../Comic"
 
 func _on_start_button_down() -> void:
 	hide()
-	$Comic.start()
+	comic.start_com()
 	
 
 func _on_options_button_down() -> void:

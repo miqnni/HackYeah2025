@@ -10,6 +10,7 @@ var clients=0
 var orders=[]
 var clients_table = []
 var A = 1.0
+var time = 10
 
 func _process(delta: float) -> void:
 	if clients<3:
@@ -25,12 +26,13 @@ func _ready() -> void:
 	timer.start()
 
 func _on_timer_timeout() -> void:
-	timer.stop()
-	if clients<3:
-		clients+=1
-		clients_table[clients-1].new_order()
-		$AnimationPlayer.play("wejscie" + str(clients))
-	var time = randf_range(1.0, 10.0)
+	if $"..".RUNNING:
+		timer.stop()
+		if clients<3:
+			clients+=1
+			clients_table[clients-1].new_order()
+			$AnimationPlayer.play("wejscie" + str(clients))
+		time = randf_range(1.0, 10.0)
 	timer.start(time)
 
 func score(order) -> float:
