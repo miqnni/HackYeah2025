@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c8tgtt7xpecuc"]
+[gd_scene load_steps=20 format=3 uid="uid://c8tgtt7xpecuc"]
 
 [ext_resource type="Script" uid="uid://cqkqgngutxm2e" path="res://scripts/menu.gd" id="1_3dmrc"]
 [ext_resource type="Texture2D" uid="uid://byhiv8brw77m4" path="res://assets/Menu/Tło menu .png" id="1_g6gyw"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dgnvwy1tqf6x3" path="res://assets/Menu/Hover sounds.png" id="15_a04p5"]
 [ext_resource type="Texture2D" uid="uid://c6i5uuucaa7gw" path="res://assets/Menu/Strzałka .png" id="16_b5gwo"]
 [ext_resource type="Texture2D" uid="uid://dh4e0sxxad3ts" path="res://assets/Menu/Hover strzałka .png" id="17_0ndyk"]
+[ext_resource type="Texture2D" uid="uid://b05timb8v1lrc" path="res://assets/Menu/Pasek .png" id="19_81l6r"]
 
 [node name="MENU" type="Node2D"]
 script = ExtResource("1_3dmrc")
@@ -32,6 +33,7 @@ texture = ExtResource("2_3dmrc")
 texture = ExtResource("3_81l6r")
 
 [node name="3places" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("4_rsfmq")
 
 [node name="start" type="TextureButton" parent="3places"]
@@ -64,7 +66,6 @@ texture_normal = ExtResource("9_ffqrc")
 texture_hover = ExtResource("10_x16fv")
 
 [node name="2places" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("11_g54pe")
 
 [node name="music" type="TextureButton" parent="2places"]
@@ -91,4 +92,15 @@ offset_bottom = 540.0
 texture_normal = ExtResource("16_b5gwo")
 texture_hover = ExtResource("17_0ndyk")
 
+[node name="pasek_muzyka" type="Sprite2D" parent="2places"]
+position = Vector2(0, -221)
+texture = ExtResource("19_81l6r")
+
+[node name="pasek_dzwiek" type="Sprite2D" parent="2places"]
+texture = ExtResource("19_81l6r")
+
 [connection signal="button_down" from="3places/start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="3places/options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="3places/exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="2places/music" to="." method="_on_music_button_down"]
+[connection signal="button_down" from="2places/szczalka" to="." method="_on_szczalka_button_down"]
