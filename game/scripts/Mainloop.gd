@@ -23,6 +23,10 @@ func _process(delta: float) -> void:
 func _ready() -> void:
 	clients_table=[client_1,client_2,client_3]
 	timer.start()
+	
+func display_game_over_clients() -> void:
+	
+	pass
 
 func _on_timer_timeout() -> void:
 	timer.stop()
@@ -30,6 +34,8 @@ func _on_timer_timeout() -> void:
 		clients+=1
 		clients_table[clients-1].new_order()
 		$AnimationPlayer.play("wejscie" + str(clients))
+	else:
+		pass # TODO: Game Over Clients Versio
 	var time = randf_range(1.0, 10.0)
 	timer.start(time)
 
