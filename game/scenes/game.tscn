@@ -1,14 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=11 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://c8tgtt7xpecuc" path="res://scenes/menu.tscn" id="2_gee14"]
-[ext_resource type="PackedScene" uid="uid://deslo1a22ilpx" path="res://scenes/comic.tscn" id="2_p57ef"]
-[ext_resource type="Script" uid="uid://cqkqgngutxm2e" path="res://scripts/menu.gd" id="4_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://blpupvc0s8gei" path="res://scenes/menu.tscn" id="2_gee14"]
+[ext_resource type="PackedScene" uid="uid://mnxopxlfxqro" path="res://scenes/comic.tscn" id="2_p57ef"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="4_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dkvqpu5spmm0c" path="res://assets/Kursor.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
 [ext_resource type="AudioStream" uid="uid://dnwmdxttl0rf4" path="res://assets/bass-vibes-kevin-macleod-main-version-02-49-12949.mp3" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://hy0fbmbmpuci" path="res://scenes/soundbar.tscn" id="10_vtaks"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -19,6 +20,7 @@ position = Vector2(639, 262)
 scale = Vector2(1.459171, 1.459171)
 
 [node name="Comic" parent="." instance=ExtResource("2_p57ef")]
+visible = false
 z_index = 6
 position = Vector2(701, 240)
 scale = Vector2(0.6653716, 0.6653716)
@@ -38,7 +40,6 @@ zoom = Vector2(0.44, 0.44)
 [node name="CursorSprite" type="Sprite2D" parent="."]
 z_index = 10
 position = Vector2(530, -13)
-rotation = 0.12217305
 texture = ExtResource("4_iywne")
 
 [node name="Bonk" type="AudioStreamPlayer2D" parent="CursorSprite"]
@@ -47,3 +48,6 @@ volume_db = -19.468
 
 [node name="Background_Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
+
+[node name="soundbar" parent="." instance=ExtResource("10_vtaks")]
+position = Vector2(440, -250)

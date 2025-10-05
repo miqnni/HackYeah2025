@@ -58,13 +58,18 @@ func game_over(type = 0) :
 	RUNNING = false
 	print("Game over")
 
+var mouse_offset_x = 65
+var mouse_offset_y = 30
+
 func _process(delta: float) -> void:
 	if not $Background_Music.playing :
 		play_sound($Background_Music, music)
 	if not RUNNING :
 		return
 	hammer_state = hammer_object.hammer_picked
-	cursor_sprite.position = get_global_mouse_position()
+	var mouse_pos = get_global_mouse_position()
+	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
+	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
 	
 	if hammer_state and click_pressed :
 		cursor_sprite.rotation += rotation_speed

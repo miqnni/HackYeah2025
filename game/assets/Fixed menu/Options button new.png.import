@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://cw87uhkbmhdjd"
+path="res://.godot/imported/Options button new.png-f8fd86ef6c7ace7d8a9294ee171d72a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/Fixed menu/Options button new.png"
+dest_files=["res://.godot/imported/Options button new.png-f8fd86ef6c7ace7d8a9294ee171d72a8.ctex"]
 
 [params]
 

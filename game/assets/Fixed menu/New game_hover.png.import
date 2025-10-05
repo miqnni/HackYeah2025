@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://coy2c4g2py4eg"
+path="res://.godot/imported/New game_hover.png-8e84368ef915782ea98df0b2a9d12ddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/Fixed menu/New game_hover.png"
+dest_files=["res://.godot/imported/New game_hover.png-8e84368ef915782ea98df0b2a9d12ddb.ctex"]
 
 [params]
 

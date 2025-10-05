@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://10kkeeb1qr7x"
+path="res://.godot/imported/Hover kopka new.png-c14d68f050f2d5498f6da2b83b940d6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/Fixed menu/Hover kopka new.png"
+dest_files=["res://.godot/imported/Hover kopka new.png-c14d68f050f2d5498f6da2b83b940d6b.ctex"]
 
 [params]
 
