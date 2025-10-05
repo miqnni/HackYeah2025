@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(520, 162)]
+"values": [Vector2(550, 162)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -30,7 +30,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(260, 162)]
+"values": [Vector2(150, 162)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -42,43 +42,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 162)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Client4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-260, 161.99998)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = false
-tracks/4/path = NodePath("Client1:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = false
-tracks/5/path = NodePath("Client4:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"values": [Vector2(-250, 162)]
 }
 
 [sub_resource type="Animation" id="Animation_k78ul"]
@@ -93,7 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(520, 162), Vector2(520, 750)]
+"values": [Vector2(550, 162), Vector2(550, 750)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -105,7 +69,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(260, 162), Vector2(520, 162)]
+"values": [Vector2(150, 162), Vector2(550, 162)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -117,19 +81,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 162), Vector2(260, 162)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Client4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-260, 161.99998), Vector2(0, 162)]
+"values": [Vector2(-250, 162), Vector2(150, 162)]
 }
 
 [sub_resource type="Animation" id="Animation_baxvn"]
@@ -144,7 +96,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(520, 750), Vector2(520, 162)]
+"values": [Vector2(550, 750), Vector2(550, 162)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -171,7 +123,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(260, 750), Vector2(260, 162)]
+"values": [Vector2(150, 750), Vector2(150, 162)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -198,7 +150,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 750), Vector2(0, 162)]
+"values": [Vector2(-250, 750), Vector2(-250, 162)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -215,30 +167,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_b1lj0"]
 resource_name = "wejscie4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Client4:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-260, 750), Vector2(-260, 161.99998)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Client4:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_baxvn"]
 _data = {
@@ -268,22 +196,17 @@ texture = ExtResource("5_baxvn")
 
 [node name="Client1" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(520, 162)
+position = Vector2(550, 162)
 scale = Vector2(0.35, 0.35)
 
 [node name="Client2" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(260, 162)
+position = Vector2(150, 162)
 scale = Vector2(0.35, 0.35)
 
 [node name="Client3" parent="." instance=ExtResource("1_ijlm5")]
 z_index = 2
-position = Vector2(0, 162)
-scale = Vector2(0.35, 0.35)
-
-[node name="Client4" parent="." instance=ExtResource("1_ijlm5")]
-z_index = 2
-position = Vector2(-260, 161.99998)
+position = Vector2(-250, 162)
 scale = Vector2(0.35, 0.35)
 
 [node name="Timer" type="Timer" parent="."]
