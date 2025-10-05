@@ -47,4 +47,4 @@ func _process(delta: float) -> void:
 		if cursor_sprite.rotation <= 0 :
 			cursor_sprite.rotation = 0
 			spring_back = false
-			$CursorSprite/Bonk.play()
+			#$CursorSprite/Bonk.play()
