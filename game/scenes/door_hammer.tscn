@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bb3pdqhw050qm" path="res://scenes/door.tscn" id="1_7wy2m"]
 [ext_resource type="Script" uid="uid://buv80d7lk68og" path="res://scripts/door_hammer.gd" id="1_fdomc"]
-[ext_resource type="Texture2D" uid="uid://bdly0os55fx2t" path="res://assets/Środek paska.png" id="2_fdomc"]
+[ext_resource type="Texture2D" uid="uid://cetpj678ka8f5" path="res://assets/Środek paska.png" id="2_fdomc"]
 [ext_resource type="PackedScene" uid="uid://d2oyrird4hagl" path="res://scenes/hammer.tscn" id="2_xwf44"]
-[ext_resource type="Texture2D" uid="uid://cxdqg6nu8acco" path="res://assets/Kulkiem .png" id="3_s38dg"]
+[ext_resource type="Texture2D" uid="uid://d2ync50pri4tk" path="res://assets/Kulkiem .png" id="3_s38dg"]
 [ext_resource type="Texture2D" uid="uid://cfwrd3r16u2tb" path="res://assets/Pasek siły .png" id="5_s38dg"]
 
 [node name="Node2D" type="Node2D"]
