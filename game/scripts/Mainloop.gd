@@ -32,7 +32,8 @@ func _on_timer_timeout() -> void:
 		$AnimationPlayer.play("wejscie" + str(clients))
 	else:
 		$"..".game_over(1)
-	var time = randf_range(1.0, 10.0)
+		return
+	var time = randf_range(10.0, 30.0)
 	timer.start(time)
 
 func score(order) -> float:

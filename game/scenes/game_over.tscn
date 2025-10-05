@@ -18,3 +18,8 @@ script = ExtResource("2_tbwuq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_o0rhi")
 debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="ChangeSlideTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="ChangeSlideTimer" to="." method="_on_change_slide_timer_timeout"]

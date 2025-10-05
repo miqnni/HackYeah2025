@@ -24,30 +24,34 @@ var tex_c8 = preload("res://assets/Potwory end/Endpotwor8.png")
 
 #@onready var selected_ending_tex: Array[Resource] = []
 @onready var selected_ending_tex: Array[Resource] = ending_w_tex # Debug default val
-
 @onready var curr_slide_idx: int = 0
-
 @onready var game = $".."
+
+const auto_change_slide_time = 3
+
 func _ready() -> void:
 	# Disable the node
 	hide()
 	pass
 
 func next_slide() -> void:
+	$ChangeSlideTimer.stop()
 	var n = selected_ending_tex.size()
 	curr_slide_idx += 1
 	
 	if curr_slide_idx >= n:
+		hide()
 		# TODO: return to main menu
 		return
 	
 	var curr_slide_tex = selected_ending_tex[curr_slide_idx]
 	texture = curr_slide_tex
+	$ChangeSlideTimer.start(5)
 
 # Call after writing to `selected_ending_tex`
 func common_ending_function() -> void:
-	print("Common Ending Function")
-	var n = selected_ending_tex.size()
+	$ChangeSlideTimer.start(auto_change_slide_time)
+	#var n = selected_ending_tex.size()
 	
 	# Load the first texture
 	if selected_ending_tex.size() > 0:
@@ -58,19 +62,18 @@ func common_ending_function() -> void:
 	# Now... do nothing. The subsequent textures will be loaded
 	# via the `next_slide()` function called on clicking
 	# the node: GameOver/Area2D
-	pass
-	
+
+
 
 func witch_ending() -> void: # Type 0 Ending
-	print("Witch Ending Function")
 	selected_ending_tex = ending_w_tex
 	common_ending_function()
-	pass
 	
 func clients_ending() -> void: # Type 1 Ending
-	print("Clients Ending Function")
 	selected_ending_tex = ending_c_tex
 	common_ending_function()
-	pass
 	
 	
+func _on_change_slide_timer_timeout() -> void:
+	next_slide()
+	$ChangeSlideTimer.start(auto_change_slide_time)
