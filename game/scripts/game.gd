@@ -10,9 +10,26 @@ var hammer_cursor = preload("res://assets/Mlotek.png")
 
 @onready var mouse_image = arrow
 
+var bolts_left = 0 
+
 var click_pressed = false
 var spring_back = false
 var num_of_bonks = 0
+
+var vol_min = -50
+var vol_max = 24
+
+var music = 30
+
+var sfx = 50
+
+var rotation_speed = 0.1
+var max_angle = PI/4
+
+var final_counter = 0
+var final_counter_max = 200
+
+var RUNNING = true
 
 func _input(event) :
 	if event is InputEventMouseButton :
@@ -31,11 +48,21 @@ func _input(event) :
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	play_sound($Background_Music, music)
 
-var rotation_speed = 0.1
-var max_angle = PI/4
+func play_sound(audioplay, volume) :
+	audioplay.volume_db = vol_min + (volume * abs(vol_min - vol_max)) / 100
+	audioplay.play()
+
+func game_over(type = 0) :
+	RUNNING = false
+	print("Game over")
 
 func _process(delta: float) -> void:
+	if not $Background_Music.playing :
+		play_sound($Background_Music, music)
+	if not RUNNING :
+		return
 	hammer_state = hammer_object.hammer_picked
 	cursor_sprite.position = get_global_mouse_position()
 	
@@ -47,4 +74,10 @@ func _process(delta: float) -> void:
 		if cursor_sprite.rotation <= 0 :
 			cursor_sprite.rotation = 0
 			spring_back = false
-			#$CursorSprite/Bonk.play()
+			
+	if bolts_left == 0 :
+		final_counter += 1
+		if final_counter >= final_counter_max :
+			# cause game over
+			game_over()
+			pass

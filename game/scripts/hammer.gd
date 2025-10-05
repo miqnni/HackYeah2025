@@ -16,9 +16,12 @@ var hammer_normal = preload("res://assets/Młotek__BEz_Obwódki_.png")
 var hammer_hover = preload("res://assets/Młotek_Z_Obwódką_.png")
 
 @onready var dot_x_center = bar_dot.position.x
-	
+@onready var GAME: Node2D = $"../.."
+
 
 func _process(delta: float) :
+	if not GAME.RUNNING :
+		return
 	if hammer_picked :
 		texture_button.texture_normal = no_hammer_normal
 		texture_button.texture_hover = no_hammer_hover

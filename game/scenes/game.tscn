@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=7 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dkvqpu5spmm0c" path="res://assets/Kursor.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
+[ext_resource type="AudioStream" uid="uid://dnwmdxttl0rf4" path="res://assets/bass-vibes-kevin-macleod-main-version-02-49-12949.mp3" id="6_p57ef"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -28,3 +29,7 @@ texture = ExtResource("4_iywne")
 
 [node name="Bonk" type="AudioStreamPlayer2D" parent="CursorSprite"]
 stream = ExtResource("5_iywne")
+volume_db = -19.468
+
+[node name="Background_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_p57ef")
