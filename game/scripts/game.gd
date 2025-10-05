@@ -9,6 +9,8 @@ var hammer_cursor = preload("res://assets/Mlotek.png")
 @onready var hammer_state = hammer_object.hammer_picked
 
 @onready var mouse_image = arrow
+@onready var soundbar: Node2D = $"2places/soundbar"
+@onready var soundbar_2: Node2D = $"2places/soundbar2"
 
 var bolts_left = 0 
 
@@ -19,9 +21,9 @@ var num_of_bonks = 0
 var vol_min = -50
 var vol_max = 24
 
-var music = 30
+var music =  30
 
-var sfx = 50
+var sfx = 30
 
 var rotation_speed = 0.1
 var max_angle = PI/4
@@ -69,7 +71,9 @@ var mouse_offset_x = 65
 var mouse_offset_y = 30
 
 func _process(delta: float) -> void:
-  var mouse_pos = get_global_mouse_position()
+	#music=soundbar.slider_val
+	#sfx = soundbar_2.slider_val
+	var mouse_pos = get_global_mouse_position()
 	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
 	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
 	if not $Background_Music.playing :

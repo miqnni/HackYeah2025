@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=10 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
@@ -8,19 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
 [ext_resource type="AudioStream" uid="uid://dnwmdxttl0rf4" path="res://assets/bass-vibes-kevin-macleod-main-version-02-49-12949.mp3" id="6_p57ef"]
-[ext_resource type="PackedScene" path="res://scenes/game_over.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" path="res://scenes/soundbar.tscn" id="10_vtaks"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
 [node name="MENU" parent="." instance=ExtResource("2_gee14")]
-visible = true
 z_index = 7
 position = Vector2(639, 262)
 scale = Vector2(1.459171, 1.459171)
 
 [node name="Comic" parent="." instance=ExtResource("2_p57ef")]
+visible = false
 z_index = 6
 position = Vector2(701, 240)
 scale = Vector2(0.6653716, 0.6653716)
@@ -46,10 +45,20 @@ texture = ExtResource("4_iywne")
 stream = ExtResource("5_iywne")
 volume_db = -19.468
 
-[node name="GameOver" parent="." instance=ExtResource("8_vtaks")]
+[node name="GameOver" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 z_index = 9
-position = Vector2(644.5, 292.99994)
-scale = Vector2(0.7309896, 0.749074)
+position = Vector2(688.99994, 246.50002)
+scale = Vector2(0.6890625, 0.7050926)
+script = null
 
 [node name="Background_Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
