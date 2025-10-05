@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://i8pnedvb6ju5"]
+[gd_scene load_steps=24 format=3 uid="uid://i8pnedvb6ju5"]
 
 [ext_resource type="Script" uid="uid://d0x5svp26o6o6" path="res://scripts/manager.gd" id="1_3vvyu"]
 [ext_resource type="Texture2D" uid="uid://bsxt2efb5hh1a" path="res://assets/Kociolek_Final.png" id="2_ig5sx"]
@@ -9,7 +9,316 @@
 [ext_resource type="Texture2D" uid="uid://c75fomu7uje2" path="res://assets/Zielona_Fiołka.png" id="6_kejet"]
 [ext_resource type="Texture2D" uid="uid://1krglp8pisd0" path="res://assets/Niebieska_Fiołka.png" id="7_0644o"]
 [ext_resource type="Texture2D" uid="uid://c0ut1jjpividw" path="res://assets/Czerwona_Fiolka.png" id="8_4nhua"]
+[ext_resource type="Texture2D" uid="uid://e38lso4emvjs" path="res://assets/Animacja_Płynięcia_Ekstratu_.png" id="8_kejet"]
 [ext_resource type="Texture2D" uid="uid://c5o341he8ouo5" path="res://assets/Beczka.png" id="9_dik0l"]
+
+[sub_resource type="Animation" id="Animation_0644o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mixtures/red_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-182, -334)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mixtures/blue_kula:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-59, 45)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mixtures/green_kula:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190, -335)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("mixtures/green_kula:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.855, 0.855)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("mixtures/blue_kula:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("mixtures/beczka_kula:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("mixtures/red_kula:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kejet"]
+resource_name = "red_kula"
+length = 2.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mixtures/red_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 2.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-182, -334), Vector2(-261, -327), Vector2(-261, 419), Vector2(-211, 455)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mixtures/red_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dik0l"]
+_data = {
+&"RESET": SubResource("Animation_0644o"),
+&"red_kula": SubResource("Animation_kejet")
+}
+
+[sub_resource type="Animation" id="Animation_68pnu"]
+resource_name = "green_kula"
+length = 2.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("green_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5, 2.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(190, -335), Vector2(277, -335), Vector2(277, 406), Vector2(240, 468)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("green_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_wbnqs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("green_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(190, -335)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("green_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6699999, 0.6699999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbnqs"]
+_data = {
+&"RESET": SubResource("Animation_wbnqs"),
+&"green_kula": SubResource("Animation_68pnu")
+}
+
+[sub_resource type="Animation" id="Animation_4nhua"]
+resource_name = "blue_kula"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-59, 45), Vector2(-59, 240)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_flogp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-59, 45)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_flogp"]
+_data = {
+&"RESET": SubResource("Animation_flogp"),
+&"blue_kula": SubResource("Animation_4nhua")
+}
+
+[sub_resource type="Animation" id="Animation_dik0l"]
+resource_name = "beczka_kula"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("beczka_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(118, 120), Vector2(121, 140), Vector2(72, 165), Vector2(72, 245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beczka_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7)]
+}
+
+[sub_resource type="Animation" id="Animation_6enr5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("beczka_kula:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(118, 120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beczka_kula:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_68pnu"]
+_data = {
+&"RESET": SubResource("Animation_6enr5"),
+&"beczka_kula": SubResource("Animation_dik0l")
+}
 
 [node name="Mix_table" type="Node2D"]
 script = ExtResource("1_3vvyu")
@@ -30,17 +339,34 @@ texture = ExtResource("5_kejet")
 position = Vector2(-28, -212)
 texture = ExtResource("5_bblaw")
 
-[node name="zielona" type="Sprite2D" parent="mixtures"]
+[node name="green" type="Sprite2D" parent="mixtures"]
 texture = ExtResource("6_kejet")
+
+[node name="green_kula" type="Sprite2D" parent="mixtures"]
+position = Vector2(190, -335)
+scale = Vector2(0.6699999, 0.6699999)
+texture = ExtResource("8_kejet")
 
 [node name="blue" type="Sprite2D" parent="mixtures"]
 texture = ExtResource("7_0644o")
 
+[node name="blue_kula" type="Sprite2D" parent="mixtures"]
+position = Vector2(-59, 45)
+texture = ExtResource("8_kejet")
+
 [node name="red" type="Sprite2D" parent="mixtures"]
 texture = ExtResource("8_4nhua")
 
-[node name="Sprite2D3" type="Sprite2D" parent="mixtures"]
+[node name="red_kula" type="Sprite2D" parent="mixtures"]
+position = Vector2(-182, -334)
+texture = ExtResource("8_kejet")
+
+[node name="beczka" type="Sprite2D" parent="mixtures"]
 texture = ExtResource("9_dik0l")
+
+[node name="beczka_kula" type="Sprite2D" parent="mixtures"]
+position = Vector2(118, 120)
+texture = ExtResource("8_kejet")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -78,6 +404,35 @@ offset_bottom = -166.0
 scale = Vector2(1.3524504, 1.1497607)
 metadata/_edit_use_anchors_ = true
 
+[node name="AnimationPlayerRed" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dik0l")
+}
+speed_scale = 5.0
+
+[node name="AnimationPlayerGreen" type="AnimationPlayer" parent="."]
+root_node = NodePath("../mixtures")
+libraries = {
+&"": SubResource("AnimationLibrary_wbnqs")
+}
+speed_scale = 5.0
+
+[node name="AnimationPlayerBlue" type="AnimationPlayer" parent="."]
+root_node = NodePath("../mixtures")
+libraries = {
+&"": SubResource("AnimationLibrary_flogp")
+}
+speed_scale = 5.0
+
+[node name="AnimationPlayerBeczka" type="AnimationPlayer" parent="."]
+root_node = NodePath("../mixtures")
+libraries = {
+&"": SubResource("AnimationLibrary_68pnu")
+}
+speed_scale = 5.0
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
@@ -86,3 +441,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="Button3" to="." method="_on_button_3_button_up"]
 [connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]
 [connection signal="button_up" from="Button4" to="." method="_on_button_4_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
