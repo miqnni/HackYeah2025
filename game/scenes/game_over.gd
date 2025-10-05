@@ -18,9 +18,11 @@ var tex_c6 = preload("res://assets/Potwory end/Endpotwor6.png")
 var tex_c7 = preload("res://assets/Potwory end/Endpotwor7.png")
 var tex_c8 = preload("res://assets/Potwory end/Endpotwor8.png")
 
+var credits = preload("res://assets/Credits.png")
+
 # Arrays of ending textures
-@onready var ending_w_tex: Array[Resource] = [tex_w1, tex_w2, tex_w3, tex_w4, tex_w5, tex_w6]
-@onready var ending_c_tex: Array[Resource] = [tex_c1, tex_c2, tex_c3, tex_c4, tex_c5, tex_c6, tex_c7, tex_c8]
+@onready var ending_w_tex: Array[Resource] = [tex_w1, tex_w2, tex_w3, tex_w4, tex_w5, tex_w6, credits]
+@onready var ending_c_tex: Array[Resource] = [tex_c1, tex_c2, tex_c3, tex_c4, tex_c5, tex_c6, tex_c7, tex_c8, credits]
 
 #@onready var selected_ending_tex: Array[Resource] = []
 @onready var selected_ending_tex: Array[Resource] = ending_w_tex # Debug default val
