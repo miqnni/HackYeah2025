@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=9 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://c8tgtt7xpecuc" path="res://scenes/menu.tscn" id="2_gee14"]
 [ext_resource type="PackedScene" uid="uid://deslo1a22ilpx" path="res://scenes/comic.tscn" id="2_p57ef"]
+[ext_resource type="Script" uid="uid://cqkqgngutxm2e" path="res://scripts/menu.gd" id="4_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dkvqpu5spmm0c" path="res://assets/Kursor.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
@@ -10,10 +12,16 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
+[node name="MENU" parent="." instance=ExtResource("2_gee14")]
+z_index = 7
+position = Vector2(639, 262)
+scale = Vector2(1.459171, 1.459171)
+
 [node name="Comic" parent="." instance=ExtResource("2_p57ef")]
 z_index = 6
 position = Vector2(701, 240)
 scale = Vector2(0.6653716, 0.6653716)
+script = ExtResource("4_0tnpc")
 
 [node name="Door" parent="." instance=ExtResource("4_lbhrr")]
 position = Vector2(-542, -113)

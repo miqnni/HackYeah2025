@@ -810,6 +810,7 @@ libraries = {
 }
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 1544.0001
 offset_top = 794.0
 offset_right = 1643.0001

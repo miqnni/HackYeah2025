@@ -9,7 +9,7 @@ extends Node2D
 
 var page=1
 
-func _ready() -> void:
+func start():
 	$AnimationPlayer.play("comic1")
 	timer.start(7)
 
