@@ -10,10 +10,3 @@ script = ExtResource("1_lnu2h")
 [node name="MainArea" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(601, 285)
 scale = Vector2(2.3, 2.3)
-
-[node name="Door" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(-562, -44)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(611.17, 275.695)
-zoom = Vector2(0.43, 0.43)
