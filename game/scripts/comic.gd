@@ -34,6 +34,8 @@ func _on_button_button_down() -> void:
 	if page==3:
 		$AnimationPlayer.play("comic4")
 		timer.start(9)
+	if page==4:
+		hide()
 	page+=1
 
 	
