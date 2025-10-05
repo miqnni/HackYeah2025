@@ -19,7 +19,7 @@ var num_of_bonks = 0
 var vol_min = -50
 var vol_max = 24
 
-var music = 50
+var music = 30
 
 var sfx = 50
 
@@ -48,6 +48,7 @@ func _input(event) :
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	play_sound($Background_Music, music)
 
 func play_sound(audioplay, volume) :
 	audioplay.volume_db = vol_min + (volume * abs(vol_min - vol_max)) / 100
@@ -58,6 +59,8 @@ func game_over(type = 0) :
 	print("Game over")
 
 func _process(delta: float) -> void:
+	if not $Background_Music.playing :
+		play_sound($Background_Music, music)
 	if not RUNNING :
 		return
 	hammer_state = hammer_object.hammer_picked

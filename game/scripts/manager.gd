@@ -1,5 +1,6 @@
 extends Node
 #@onready var timer: Timer = $Timer
+@onready var GAME: Node2D = $"../.."
 
 var Red = 255
 var Green = 255
@@ -16,8 +17,13 @@ func _ready() -> void:
 	$mixtures/blue_kula.hide();
 	$mixtures/red_kula.hide();
 	$mixtures/beczka_kula.hide();
+	
+var bubbles_active = false
 
 func _process(_delta: float) -> void:
+	if not $Sounds/Bubbles.playing and bubbles_active :
+		GAME.play_sound($Sounds/Bubbles, 0.6 * GAME.sfx)
+	
 	if h_red:
 		if Green>0:
 			Green-=1
@@ -49,6 +55,21 @@ func wait_for_animation_finish(full_animation_time: float, animation_player: Ani
 	await get_tree().create_timer(remaining_time).timeout
 	pass
 
+func play_glass_sound() :
+	var sounds = [$Sounds/Glass1, $Sounds/Glass2, $Sounds/Glass3]
+	
+	var rng = RandomNumberGenerator.new().randf_range(0, 2)
+	GAME.play_sound(sounds[rng], 0.6*GAME.sfx)
+	
+func bubbles_toggle() :
+	if bubbles_active :
+		$Sounds/Bubbles.stop()
+	else :
+		GAME.play_sound($Sounds/Bubbles, 0.6 * GAME.sfx)
+		
+	bubbles_active = !bubbles_active
+	
+	
 # RED, 2.75
 func _on_button_button_down() -> void:
 	#if !can_press:
@@ -60,6 +81,8 @@ func _on_button_button_down() -> void:
 	$mixtures/red_kula.show()
 	$AnimationPlayerRed.play("red_kula")
 	h_red=true
+	play_glass_sound()
+	bubbles_toggle()
 
 
 func _on_button_button_up() -> void:
@@ -67,6 +90,7 @@ func _on_button_button_up() -> void:
 	$AnimationPlayerRed.stop()
 	$mixtures/red_kula.hide()
 	h_red=false
+	bubbles_toggle()
 
 # GREEN, 2.75, scale 0.5
 # 0.0: (190, -335)
@@ -81,6 +105,8 @@ func _on_button_2_button_down() -> void:
 	$mixtures/green_kula.show()
 	$AnimationPlayerGreen.play("green_kula")
 	h_green=true
+	play_glass_sound()
+	bubbles_toggle()
 	
 
 func _on_button_2_button_up() -> void:
@@ -88,6 +114,7 @@ func _on_button_2_button_up() -> void:
 	$AnimationPlayerGreen.stop()
 	$mixtures/green_kula.hide()
 	h_green=false
+	bubbles_toggle()
 
 
 # BLUE, 2.0
@@ -101,6 +128,8 @@ func _on_button_3_button_down() -> void:
 	$mixtures/blue_kula.show()
 	$AnimationPlayerBlue.play("blue_kula")
 	h_blue=true
+	play_glass_sound()
+	bubbles_toggle()
 	
 
 func _on_button_3_button_up() -> void:
@@ -108,6 +137,7 @@ func _on_button_3_button_up() -> void:
 	$AnimationPlayerBlue.stop()
 	$mixtures/blue_kula.hide()
 	h_blue=false
+	bubbles_toggle()
 	
 # BECZKA, 2.0
 # 0.0: (118, 120)
@@ -123,12 +153,15 @@ func _on_button_4_button_down() -> void:
 	$mixtures/beczka_kula.show()
 	$AnimationPlayerBeczka.play("beczka_kula")
 	h_del=true
+	play_glass_sound()
+	bubbles_toggle()
 
 func _on_button_4_button_up() -> void:
 	await wait_for_animation_finish(2.0, $AnimationPlayerBeczka)
 	$AnimationPlayerBeczka.stop()
 	$mixtures/beczka_kula.hide()
 	h_del=false
+	bubbles_toggle()
 
 
 #func _on_timer_timeout() -> void:
