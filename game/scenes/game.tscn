@@ -25,9 +25,9 @@ visible = false
 z_index = 6
 position = Vector2(701, 240)
 scale = Vector2(0.6653716, 0.6653716)
-script = ExtResource("4_0tnpc")
 
 [node name="Door" parent="." instance=ExtResource("4_lbhrr")]
+z_index = 1
 position = Vector2(-542, -113)
 
 [node name="MainArea" parent="." instance=ExtResource("1_uwrxv")]
