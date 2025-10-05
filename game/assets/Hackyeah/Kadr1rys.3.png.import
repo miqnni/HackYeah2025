@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cccqqpbdks114"
-path="res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"
+uid="uid://4nccxp1ralr"
+path="res://.godot/imported/Kadr1rys.3.png-fc563cde74ebf2418df878feca5bf48b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_Final.png"
-dest_files=["res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"]
+source_file="res://assets/Hackyeah/Kadr1rys.3.png"
+dest_files=["res://.godot/imported/Kadr1rys.3.png-fc563cde74ebf2418df878feca5bf48b.ctex"]
 
 [params]
 

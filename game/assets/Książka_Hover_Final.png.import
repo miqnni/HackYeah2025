@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cccqqpbdks114"
-path="res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"
+uid="uid://dg3f0cq1a5i0u"
+path="res://.godot/imported/Książka_Hover_Final.png-88a1483f48dddfd0b69c1e06934a077a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_Final.png"
-dest_files=["res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"]
+source_file="res://assets/Książka_Hover_Final.png"
+dest_files=["res://.godot/imported/Książka_Hover_Final.png-88a1483f48dddfd0b69c1e06934a077a.ctex"]
 
 [params]
 
