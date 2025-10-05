@@ -1,15 +1,46 @@
 extends Node2D
 
+var arrow = preload("res://assets/Kursor.png")
+var click = preload("res://assets/Kursor_-_Klik.png")
+var hammer_cursor = preload("res://assets/Młotek__BEz_Obwódki_.png")
+@onready var hammer_object: Node2D = $Door/Hammer
+@onready var cursor_sprite: Sprite2D = $CursorSprite
 
-# Load the custom images for the mouse cursor.
-var arrow = load("res://arrow.png")
-var beam = load("res://beam.png")
+@onready var hammer_state = hammer_object.hammer_picked
 
+@onready var mouse_image = arrow
+
+var click_pressed = false
+var spring_back = false
+
+func _input(event) :
+	if event is InputEventMouseButton :
+		if event.button_index == MOUSE_BUTTON_LEFT :
+			if event.pressed :
+				click_pressed = true
+				if not hammer_state :
+					cursor_sprite.texture = click
+			else :
+				click_pressed = false
+				spring_back = true
+				if not hammer_state :
+					cursor_sprite.texture = arrow
+				else :
+					cursor_sprite.texture = hammer_cursor
 
 func _ready():
-	# Changes only the arrow shape of the cursor.
-	# This is similar to changing it in the project settings.
-	Input.set_custom_mouse_cursor(arrow)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
-	# Changes a specific shape of the cursor (here, the I-beam shape).
-	Input.set_custom_mouse_cursor(beam, Input.CURSOR_IBEAM)
+var rotation_speed = 0.1
+
+func _process(delta: float) -> void:
+	hammer_state = hammer_object.hammer_picked
+	cursor_sprite.position = get_global_mouse_position()
+	
+	if hammer_state and click_pressed :
+		cursor_sprite.rotation += rotation_speed
+	if hammer_state and spring_back :
+		cursor_sprite.rotation -= 3*rotation_speed
+		if cursor_sprite.rotation <= 0 :
+			cursor_sprite.rotation = 0
+			spring_back = false

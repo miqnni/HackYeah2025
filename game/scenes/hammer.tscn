@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bn7y0nt284g2c" path="res://assets/Młotek_Z_Obwódką_.png" id="2_01xny"]
 [ext_resource type="Texture2D" uid="uid://dg2bhoc2vvoqg" path="res://assets/Młotek__BEz_Obwódki_.png" id="2_7cboi"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Hammer_body" type="Node2D"]
 script = ExtResource("1_7cboi")
 
 [node name="TextureButton" type="TextureButton" parent="."]
