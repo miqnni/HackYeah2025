@@ -1,6 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://mnxopxlfxqro"]
+[gd_scene load_steps=26 format=3 uid="uid://deslo1a22ilpx"]
 
-[ext_resource type="Script" path="res://scripts/comic.gd" id="1_vuijb"]
+[ext_resource type="Script" uid="uid://dm7mqmc7dpidu" path="res://scripts/comic.gd" id="1_vuijb"]
 [ext_resource type="Texture2D" uid="uid://cay1px8b3fdfq" path="res://assets/Hackyeah/Kadr1rys.1.png" id="2_w6byc"]
 [ext_resource type="Texture2D" uid="uid://dafafhky4f2bp" path="res://assets/Hackyeah/Kadr1rys.2.png" id="3_a1yvj"]
 [ext_resource type="Texture2D" uid="uid://4nccxp1ralr" path="res://assets/Hackyeah/Kadr1rys.3.png" id="4_p1cgm"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://uia7u1o5w7p7" path="res://assets/Hackyeah/Kadr4rys.5.png" id="14_ad5ib"]
 [ext_resource type="Texture2D" uid="uid://cjuuiuhgsyrd0" path="res://assets/Hackyeah/Kadr4rys.2.png" id="15_30inl"]
 [ext_resource type="Texture2D" uid="uid://cyeaq4xy60c04" path="res://assets/Hackyeah/Kadr4rys.3.png" id="16_x3n4h"]
-[ext_resource type="Texture2D" uid="uid://cmsunywnrf3cr" path="res://icon.svg" id="17_317p4"]
+[ext_resource type="Texture2D" uid="uid://bo3s54eto3lky" path="res://assets/Łapka_W_Bok.png" id="17_317p4"]
 
 [sub_resource type="Gradient" id="Gradient_618hr"]
 
@@ -811,19 +811,16 @@ libraries = {
 
 [node name="Button" type="Button" parent="."]
 visible = false
-offset_left = 1607.0001
-offset_top = 749.0
-offset_right = 1706.0001
-offset_bottom = 838.0
+offset_left = 1544.0001
+offset_top = 794.0
+offset_right = 1643.0001
+offset_bottom = 883.0
 scale = Vector2(3.0376925, 3.748317)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Button"]
 position = Vector2(47.651306, 46.35414)
 scale = Vector2(0.8088477, 0.71803063)
 texture = ExtResource("17_317p4")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
