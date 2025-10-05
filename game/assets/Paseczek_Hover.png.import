@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ync50pri4tk"
-path="res://.godot/imported/Kulkiem .png-bd097446bfada481b8e0faf5c9def1dd.ctex"
+uid="uid://cd1x20s6qmsyd"
+path="res://.godot/imported/Paseczek_Hover.png-aa946f6a04854565d66e4ebed6998cec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Kulkiem .png"
-dest_files=["res://.godot/imported/Kulkiem .png-bd097446bfada481b8e0faf5c9def1dd.ctex"]
+source_file="res://assets/Paseczek_Hover.png"
+dest_files=["res://.godot/imported/Paseczek_Hover.png-aa946f6a04854565d66e4ebed6998cec.ctex"]
 
 [params]
 

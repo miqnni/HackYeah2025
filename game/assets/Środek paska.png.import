@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ync50pri4tk"
-path="res://.godot/imported/Kulkiem .png-bd097446bfada481b8e0faf5c9def1dd.ctex"
+uid="uid://cetpj678ka8f5"
+path="res://.godot/imported/Środek paska.png-d92137fe0b3db862716bc26fc7be7633.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Kulkiem .png"
-dest_files=["res://.godot/imported/Kulkiem .png-bd097446bfada481b8e0faf5c9def1dd.ctex"]
+source_file="res://assets/Środek paska.png"
+dest_files=["res://.godot/imported/Środek paska.png-d92137fe0b3db862716bc26fc7be7633.ctex"]
 
 [params]
 

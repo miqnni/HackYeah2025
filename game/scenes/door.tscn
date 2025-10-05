@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bb3pdqhw050qm"]
 
-[ext_resource type="Texture2D" uid="uid://cccqqpbdks114" path="res://assets/Drzwi_FINAL.png" id="1_la1wf"]
+[ext_resource type="Texture2D" uid="uid://nrnai5kxsxjs" path="res://assets/Dłuższe_Drzwi.png" id="1_83dcw"]
 [ext_resource type="Texture2D" uid="uid://b0alw35e4p0w2" path="res://assets/Klamka_Final.png" id="2_18pbm"]
 [ext_resource type="PackedScene" uid="uid://dphvjodqxe6pp" path="res://scenes/plank.tscn" id="2_uvdjg"]
 
@@ -9,26 +9,26 @@
 [node name="Node2D2" type="Node2D"]
 
 [node name="door" type="Sprite2D" parent="."]
-texture = ExtResource("1_la1wf")
+texture = ExtResource("1_83dcw")
 
 [node name="Plank1" parent="." instance=ExtResource("2_uvdjg")]
-position = Vector2(-0.9999995, -245.99998)
+position = Vector2(-2.9999967, -235.99998)
 rotation = 1.7069321
 
 [node name="Plank2" parent="." instance=ExtResource("2_uvdjg")]
-position = Vector2(8.000002, -39)
+position = Vector2(7, -18.000002)
 rotation = -1.4643313
 
 [node name="Plank3" parent="." instance=ExtResource("2_uvdjg")]
-position = Vector2(16.000002, 101.99999)
+position = Vector2(17, 124)
 rotation = 1.7086773
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-154, 15)
-scale = Vector2(0.92543864, 1.1465517)
+position = Vector2(-143.875, 27)
+scale = Vector2(0.9627194, 1.1465517)
 texture = ExtResource("2_18pbm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
