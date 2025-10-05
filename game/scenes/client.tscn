@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0abm4ihic0l4"]
+[gd_scene load_steps=15 format=3 uid="uid://d0abm4ihic0l4"]
 
 [ext_resource type="Texture2D" uid="uid://b28vcqhpy7g7q" path="res://assets/npc1.png" id="1_da3od"]
 [ext_resource type="Script" uid="uid://chdsnxwjdnnuy" path="res://scripts/client_click_target.gd" id="2_1t5vp"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bccsti4g1278s" path="res://assets/Potek 1 .png" id="8_7rsog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1t5vp"]
-size = Vector2(489, 1607.25)
+size = Vector2(489, 1150.625)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7rsog"]
 animations = [{
@@ -27,6 +27,67 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_umycy"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClientOrderPopUp/Sprite2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617993877991494, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClientOrderPopUp/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617993877991494, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_7rsog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClientOrderPopUp/Sprite2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ClientOrderPopUp/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7rsog"]
+_data = {
+&"RESET": SubResource("Animation_7rsog"),
+&"new_animation": SubResource("Animation_umycy")
+}
+
 [node name="Client" type="Sprite2D"]
 texture = ExtResource("1_da3od")
 script = ExtResource("2_r26j7")
@@ -38,19 +99,19 @@ script = ExtResource("2_1t5vp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
-position = Vector2(-1501.5, 287.625)
+position = Vector2(-1293, 510.3125)
 shape = SubResource("RectangleShape2D_1t5vp")
 
 [node name="tlo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-807, -647.00006)
+position = Vector2(-807, -317.10007)
 scale = Vector2(4.1498365, 4.1498365)
 texture = ExtResource("6_7rsog")
 
 [node name="ClientOrderPopUp" type="AnimatedSprite2D" parent="."]
 visible = false
 z_index = 1
-position = Vector2(-807, -647)
+position = Vector2(-807, -317.09995)
 scale = Vector2(4.15, 4.15)
 sprite_frames = SubResource("SpriteFrames_7rsog")
 autoplay = "default"
@@ -66,6 +127,12 @@ position = Vector2(0, -1.5258789e-05)
 scale = Vector2(0.29998815, 0.29998815)
 texture = ExtResource("6_umycy")
 script = ExtResource("6_dipmf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7rsog")
+}
+autoplay = "new_animation"
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
