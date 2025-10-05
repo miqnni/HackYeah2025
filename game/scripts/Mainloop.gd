@@ -46,7 +46,7 @@ func free_client(nr):
 
 func _on_timer_2_timeout() -> void:
 	timer_2.stop()
-	$AnimationPlayer.play("RESET")
 	for i in range(3):
 		clients_table[i].order=clients_table[i+1].order
 	clients-=1
+	$AnimationPlayer.play("RESET")
