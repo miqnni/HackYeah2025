@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=10 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
@@ -14,11 +14,13 @@
 script = ExtResource("1_lnu2h")
 
 [node name="MENU" parent="." instance=ExtResource("2_gee14")]
+visible = false
 z_index = 7
 position = Vector2(639, 262)
 scale = Vector2(1.459171, 1.459171)
 
 [node name="Comic" parent="." instance=ExtResource("2_p57ef")]
+visible = false
 z_index = 6
 position = Vector2(701, 240)
 scale = Vector2(0.6653716, 0.6653716)
