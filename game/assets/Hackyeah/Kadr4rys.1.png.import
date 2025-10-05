@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1hege3ywgvq"
-path="res://.godot/imported/dymek-środek.png-2689388c9458011715cd1dafc74aba4b.ctex"
+uid="uid://cfr2n22hqlygm"
+path="res://.godot/imported/Kadr4rys.1.png-dafa3581c3fc6c921483c10bb5661e8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dymek-środek.png"
-dest_files=["res://.godot/imported/dymek-środek.png-2689388c9458011715cd1dafc74aba4b.ctex"]
+source_file="res://assets/Hackyeah/Kadr4rys.1.png"
+dest_files=["res://.godot/imported/Kadr4rys.1.png-dafa3581c3fc6c921483c10bb5661e8a.ctex"]
 
 [params]
 

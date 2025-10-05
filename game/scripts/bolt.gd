@@ -17,7 +17,7 @@ var ang_max = 5*PI
 var bolt_loose_base = 0
 
 var bolt_prob = 0.01
-var bolt_jump = 0.01
+var bolt_jump = 0.001
 var rng = RandomNumberGenerator.new()
 
 func _process(delta: float) :
@@ -26,12 +26,13 @@ func _process(delta: float) :
 	var rand = rng.randf_range(0, 1)
 	if rand < bolt_prob :
 		bolt_out += bolt_jump
+		if bolt_jump <= 0.2 :
+			bolt_jump += 0.001
 	
 	sprite_2d.modulate = Color(1, 0, 0, bolt_out)
 	
 	if bolt_out >= 1 :
 		release_bolt()
-	bolt_jump += 0.0001
 	
 func _ready() :
 	rigid_body_2d.freeze = true
