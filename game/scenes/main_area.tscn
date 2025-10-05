@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0imawpt80tvo"]
+[gd_scene load_steps=13 format=3 uid="uid://b0imawpt80tvo"]
 
 [ext_resource type="PackedScene" uid="uid://d0abm4ihic0l4" path="res://scenes/client.tscn" id="1_ijlm5"]
 [ext_resource type="Script" uid="uid://dx8gsapaxfulv" path="res://scripts/Mainloop.gd" id="1_k78ul"]
 [ext_resource type="PackedScene" uid="uid://i8pnedvb6ju5" path="res://scenes/mix_table.tscn" id="2_suqx5"]
 [ext_resource type="Texture2D" uid="uid://bf6h2kspnn80p" path="res://assets/Blat_Final_.png" id="3_k78ul"]
-[ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_nx8rg"]
 [ext_resource type="Texture2D" uid="uid://bbtvayiogalet" path="res://assets/mc.png" id="5_baxvn"]
 
 [sub_resource type="Animation" id="Animation_nx8rg"]
@@ -255,21 +254,15 @@ _data = {
 script = ExtResource("1_k78ul")
 
 [node name="Mix_table" parent="." instance=ExtResource("2_suqx5")]
-position = Vector2(663.6121, 224.87466)
+position = Vector2(734, 223)
 
 [node name="Table" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(-249.21678, 330.9367)
 texture = ExtResource("3_k78ul")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.6, 0.6)
-
-[node name="Door" parent="." instance=ExtResource("4_nx8rg")]
-position = Vector2(-941, -261)
-
 [node name="Gracz" type="Sprite2D" parent="."]
-position = Vector2(110, 71.867)
+position = Vector2(229, -13.000008)
 scale = Vector2(1, 1.005)
 texture = ExtResource("5_baxvn")
 
