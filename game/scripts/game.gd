@@ -2,7 +2,7 @@ extends Node2D
 
 var arrow = preload("res://assets/Kursor.png")
 var click = preload("res://assets/Kursor_-_Klik.png")
-var hammer_cursor = preload("res://assets/Młotek__BEz_Obwódki_.png")
+var hammer_cursor = preload("res://assets/Mlotek.png")
 @onready var hammer_object: Node2D = $Door/Hammer
 @onready var cursor_sprite: Sprite2D = $CursorSprite
 
@@ -12,6 +12,7 @@ var hammer_cursor = preload("res://assets/Młotek__BEz_Obwódki_.png")
 
 var click_pressed = false
 var spring_back = false
+var num_of_bonks = 0
 
 func _input(event) :
 	if event is InputEventMouseButton :
@@ -32,6 +33,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 var rotation_speed = 0.1
+var max_angle = PI/4
 
 func _process(delta: float) -> void:
 	hammer_state = hammer_object.hammer_picked
@@ -39,8 +41,10 @@ func _process(delta: float) -> void:
 	
 	if hammer_state and click_pressed :
 		cursor_sprite.rotation += rotation_speed
+		cursor_sprite.rotation = min(cursor_sprite.rotation, max_angle)
 	if hammer_state and spring_back :
 		cursor_sprite.rotation -= 3*rotation_speed
 		if cursor_sprite.rotation <= 0 :
 			cursor_sprite.rotation = 0
 			spring_back = false
+			$CursorSprite/Bonk.play()

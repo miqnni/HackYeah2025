@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=6 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dkvqpu5spmm0c" path="res://assets/Kursor.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://co80gs73vn3db" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -24,3 +25,6 @@ z_index = 10
 position = Vector2(530, -13)
 rotation = 0.12217305
 texture = ExtResource("4_iywne")
+
+[node name="Bonk" type="AudioStreamPlayer2D" parent="CursorSprite"]
+stream = ExtResource("5_iywne")
