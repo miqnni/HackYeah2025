@@ -1,5 +1,7 @@
 extends Sprite2D
 @onready var main_area: Node2D = $".."
+@onready var GAME: Node2D = $"../.."
+
 
 var tex_table=[]
 var pot_table=[]
@@ -34,6 +36,10 @@ func new_order():
 	texture=tex_table[tex]
 
 func submit():
+	if GAME.hammer_state :
+		GAME.play_sound($"../../CursorSprite/Bonk", GAME.sfx)
+		$AnimationPlayer.play("bonked")
+		return
 	if name=="Client1":
 		score = main_area.score(order)
 		print(score)
