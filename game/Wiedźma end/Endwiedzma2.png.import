@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"
+uid="uid://c45u1vgjpj7uh"
+path="res://.godot/imported/Endwiedzma2.png-e3ae1d818320db229e7f37dcde94eaab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_Final.png"
-dest_files=["res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"]
+source_file="res://Wiedźma end/Endwiedzma2.png"
+dest_files=["res://.godot/imported/Endwiedzma2.png-e3ae1d818320db229e7f37dcde94eaab.ctex"]
 
 [params]
 

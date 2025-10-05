@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"
+uid="uid://dgnqhgjhg7c5s"
+path="res://.godot/imported/Książka_Final_Ang.png-32d692a33f8a4ff6d9c46fb4736a69ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_Final.png"
-dest_files=["res://.godot/imported/Drzwi_Final.png-9fd874b95846892fd56f125a8b87cc69.ctex"]
+source_file="res://assets/Książka_Final_Ang.png"
+dest_files=["res://.godot/imported/Książka_Final_Ang.png-32d692a33f8a4ff6d9c46fb4736a69ff.ctex"]
 
 [params]
 
