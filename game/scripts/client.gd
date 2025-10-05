@@ -1,5 +1,7 @@
 extends Sprite2D
-@onready var main_area: Node2D = $".."
+@onready var client_line: Node2D = $".."
+
+#signal client_clicked
 
 var order = [0,0,0]
 var score = 0
@@ -17,8 +19,13 @@ func submit():
 		#main_area.free_client(0)
 	
 	# Get client's scores
-	score = main_area.score(order)
-	print(score)
+	
+	#score = main_area.score(order) # TODO
+	#print(score)
+	
+	#free()
+	#client_clicked.emit()
+		
 	pass
 
 # TODO: Rage Meter
