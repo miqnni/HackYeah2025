@@ -29,6 +29,8 @@ var max_angle = PI/4
 var final_counter = 0
 var final_counter_max = 200
 
+var RUNNING = true
+
 func _input(event) :
 	if event is InputEventMouseButton :
 		if event.button_index == MOUSE_BUTTON_LEFT :
@@ -51,8 +53,13 @@ func play_sound(audioplay, volume) :
 	audioplay.volume_db = vol_min + (volume * abs(vol_min - vol_max)) / 100
 	audioplay.play()
 
+func game_over(type = 0) :
+	RUNNING = false
+	print("Game over")
 
 func _process(delta: float) -> void:
+	if not RUNNING :
+		return
 	hammer_state = hammer_object.hammer_picked
 	cursor_sprite.position = get_global_mouse_position()
 	
@@ -65,12 +72,9 @@ func _process(delta: float) -> void:
 			cursor_sprite.rotation = 0
 			spring_back = false
 			
-			#play_sound($CursorSprite/Bonk, sfx)
-			
 	if bolts_left == 0 :
 		final_counter += 1
 		if final_counter >= final_counter_max :
 			# cause game over
-			print("Game over")
+			game_over()
 			pass
-		

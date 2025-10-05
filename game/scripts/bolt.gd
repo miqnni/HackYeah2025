@@ -23,7 +23,7 @@ var bolt_jump = 0.001
 var rng = RandomNumberGenerator.new()
 
 func _process(delta: float) :
-	if bolt_released :
+	if bolt_released or not GAME.RUNNING :
 		return
 	var rand = rng.randf_range(0, 1)
 	if rand < bolt_prob :
