@@ -69,7 +69,7 @@ var mouse_offset_x = 65
 var mouse_offset_y = 30
 
 func _process(delta: float) -> void:
-  var mouse_pos = get_global_mouse_position()
+	var mouse_pos = get_global_mouse_position()
 	cursor_sprite.position.x = mouse_pos.x + mouse_offset_x
 	cursor_sprite.position.y = mouse_pos.y + mouse_offset_y
 	if not $Background_Music.playing :

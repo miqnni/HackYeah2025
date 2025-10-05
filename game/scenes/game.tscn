@@ -1,16 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://b20r7ucu5bo00"]
+[gd_scene load_steps=12 format=3 uid="uid://b20r7ucu5bo00"]
 
 [ext_resource type="Script" uid="uid://cmiu0jcnmr1ly" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b0imawpt80tvo" path="res://scenes/main_area.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://blpupvc0s8gei" path="res://scenes/menu.tscn" id="2_gee14"]
-[ext_resource type="PackedScene" uid="uid://mnxopxlfxqro" path="res://scenes/comic.tscn" id="2_p57ef"]
-[ext_resource type="Script" path="res://scripts/menu.gd" id="4_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://deslo1a22ilpx" path="res://scenes/comic.tscn" id="2_p57ef"]
+[ext_resource type="Script" uid="uid://cqkqgngutxm2e" path="res://scripts/menu.gd" id="4_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dkvqpu5spmm0c" path="res://assets/Kursor.png" id="4_iywne"]
 [ext_resource type="PackedScene" path="res://scenes/door_hammer.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://c6eercdvwv203" path="res://assets/BONK.mp3" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://b7ht0h6oi3ybx" path="res://scenes/game_over.tscn" id="6_p57ef"]
 [ext_resource type="AudioStream" uid="uid://dnwmdxttl0rf4" path="res://assets/bass-vibes-kevin-macleod-main-version-02-49-12949.mp3" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://hy0fbmbmpuci" path="res://scenes/soundbar.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://b7ht0h6oi3ybx" path="res://scenes/game_over.tscn" id="11_kvpfn"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -47,12 +47,13 @@ texture = ExtResource("4_iywne")
 stream = ExtResource("5_iywne")
 volume_db = -19.468
 
-[node name="GameOver" parent="." instance=ExtResource("6_p57ef")]
-z_index = 9
-position = Vector2(688.99994, 246.50002)
-scale = Vector2(0.6890625, 0.7050926)
 [node name="Background_Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
 
 [node name="soundbar" parent="." instance=ExtResource("10_vtaks")]
 position = Vector2(440, -250)
+
+[node name="GameOver" parent="." instance=ExtResource("11_kvpfn")]
+z_index = 9
+position = Vector2(678.49994, 262.5)
+scale = Vector2(0.69348955, 0.70138884)
