@@ -59,6 +59,7 @@ func _on_texture_button_button_down() -> void:
 				bolt_out = 1
 			else :
 				bolt_out = 0
+		$Wood_Bonk.play()
 		return
 	
 	bolt_out = 1

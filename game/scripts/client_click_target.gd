@@ -7,8 +7,10 @@ func _input_event(viewport, event, shape_idx):
 		
 
 func _on_mouse_entered() -> void:
-	$"../ClientOrderPopUp".show()
-	
+	if client.name=="Client1":
+		$"../ClientOrderPopUp".show()
+		$"../tlo".show()
 
 func _on_mouse_exited() -> void:
 	$"../ClientOrderPopUp".hide()
+	$"../tlo".hide()
