@@ -30,6 +30,8 @@ func _on_timer_timeout() -> void:
 		clients+=1
 		clients_table[clients-1].new_order()
 		$AnimationPlayer.play("wejscie" + str(clients))
+	else:
+		$"..".game_over(1)
 	var time = randf_range(1.0, 10.0)
 	timer.start(time)
 
