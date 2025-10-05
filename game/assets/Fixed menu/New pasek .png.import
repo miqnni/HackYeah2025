@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1kphgnva6i6"
-path="res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"
+uid="uid://lffsx4gafq6y"
+path="res://.godot/imported/New pasek .png-38fd7d92b1ca428ef60936db09f2f6a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Drzwi_FINAL.png"
-dest_files=["res://.godot/imported/Drzwi_FINAL.png-9abc3d28a46f8d064c69b1ae7adbb666.ctex"]
+source_file="res://assets/Fixed menu/New pasek .png"
+dest_files=["res://.godot/imported/New pasek .png-38fd7d92b1ca428ef60936db09f2f6a7.ctex"]
 
 [params]
 
